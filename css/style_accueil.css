@@ -1,0 +1,322 @@
+body{
+}
+/******************************* CSS H1 : NOM ASSO ******************************************/
+h1{
+    text-align: center;
+    margin-bottom: 200%;
+    font-family: Arial;
+}
+
+/******************************* CSS MENUS CARRES ********************************************/
+.onglets{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    margin: 2%;
+}
+
+.onglets div{
+    width:21%;
+    border-radius: 15px;
+    box-shadow: 7px 7px 10px darkgrey;
+}
+
+.onglets div::after{
+    content: '';
+    padding-top:100%;
+    display: block;
+}
+
+.onglets div:hover{
+    opacity: 70%;
+    transition-duration: 0.33s;
+    font-size: 1.1em;
+}
+
+
+.title{
+    position: absolute;
+    display: flex;
+    width: 21%;
+    height: 100%;
+
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+    font-family: Arial;
+}
+
+
+
+.QuiSommesNous{
+    background-color: #4385d1;
+}
+
+.Pacing{
+    background-color: #a1d5ed;
+}
+
+.SFC{
+    background-color: #5ab4e6;
+}
+
+.DouleurChronique{
+    background-color: #abc8ff;
+}
+
+/******************************* CSS CONTENEUR : CARROUSEL + IMAGE + TEXTE ********************************************/
+
+.conteneur{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2%;
+}
+
+.carousel{
+    width: 46%;
+}
+
+.carousel p{
+    font-family: Arial;
+    font-size: 20px;
+    color: white;
+}
+
+.carousel h5{
+    font-family: Arial;
+    font-size: 27px;
+    color: white;
+    font-weight: bold;
+}
+
+
+
+.carousel-item{
+    /*position: relative;*/
+}
+
+.carousel-caption{
+    display:flex !important;
+    flex-direction: column;
+    /*position: absolute;*/
+    top: 5%;
+}
+
+.carousel-item  button{
+    box-shadow: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.carousel-item  button:hover{
+    scale: 110%;
+    background-color: #dbdbdb;
+    transition: 0.1s;
+}
+
+.conteneur .bloc{
+    width: 22%;
+}
+
+.conteneur img{
+    width: 100%;
+}
+
+/***************************** CSS VERBES ASSOCIATION ************************************************/
+.verbes{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2% 0 2%;
+    margin-bottom: 2%;
+
+    background: linear-gradient(to right, #022d5d, #011E0B);
+}
+
+.verbes h2{
+    color: white;
+    font-size: 45px;
+}
+
+/**************************** CSS PARAGRAPHES PAGE ACCUEIL ************************************************/
+p{
+    margin: 2%;
+    text-align: justify;
+    font-size: 25px;
+    font-family: Arial;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+/**************************** CSS LIENS ***********************************************************/
+.liens{
+    background: linear-gradient(to right, #022d5d, #011E0B);
+    padding: 2% 2% 2%;
+    position: relative;
+}
+
+.liens h2{
+    color: white;
+}
+
+.liens a{
+    color: white;
+    text-decoration: none;
+}
+
+.liens a:hover{
+    text-decoration: underline;
+}
+
+.liens div{
+    padding: 0 1%;
+}
+
+.liens button{
+    position: absolute;
+    top: 40%;
+    right: 10%;
+    padding: 1%;
+
+    border-radius: 8px;
+    color: white;
+    font-size: 25px;
+    font-family: Arial;
+    background-color: #8D0A0A;
+    box-shadow:none;
+    border: none;
+}
+
+.liens button:hover{
+    background-color: #ac2929;
+}
+
+/********************************************* RESPONSIVE DESIGN POUR ECRAN TYPE TABLETTE ******************************/
+
+@media screen and (min-width: 600px) and (max-width: 1200px){
+
+    /******************************* RESPONSIVE CONTENEUR : CARROUSEL + IMAGE + TEXTE ********************************************/
+    .conteneur{
+        flex-direction: column;
+    }
+
+    .carousel{
+        width: 100%;
+        padding: 2%;
+    }
+
+    .conteneur .bloc{
+        display: flex;
+        width: 100%;
+    }
+    .conteneur .bloc img{
+        width: 50%;
+    }
+
+    .carousel p{
+        font-size:18px;
+    }
+
+    .carousel h5{
+        font-size: 25px;
+    }
+}
+/********************************************* RESPONSIVE DESIGN INTERMEDIAIRE ***************************************/
+@media screen and (min-width:600px) and (max-width:1484px){
+    /*********** RESPONSIVE CAROUSEL ****************************/
+    .carousel p{
+        font-size:16px;
+    }
+
+
+    /*********** RESPONSIVE VERBES *******************************/
+    .verbes h2{
+        font-size: 26px;
+    }
+}
+
+/********************************************* RESPONSIVE DESIGN POUR ECRAN TYPE SMARTPHONE ***************************************/
+@media screen and (max-width:599px){
+    /************************************** RESPONSIVE MENUS CARRES *************************************/
+
+    .onglets{
+        flex-direction: column;
+    }
+    /*
+    .onglets div{
+        width: 100%;
+        height: 50px;
+        box-shadow: none;
+    }
+    .onglets div::after{
+        content: none;
+        padding-top:0;
+    }
+    .title{
+        width: 100%;
+        height: 100%;
+    }*/
+
+    .onglets div{
+        width: 100%;
+        margin-bottom: 2%;
+        box-shadow: none;
+        border-radius: 7px;
+    }
+
+    .onglets div::after{
+        content: '';
+        padding-top:12%;
+        display: block;
+
+    }
+
+    .title{
+        width: 100%;
+        height: 22%;
+    }
+
+
+    /******************************* RESPONSIVE CONTENEUR : CARROUSEL + IMAGE + TEXTE ********************************************/
+
+    .conteneur{
+        flex-direction: column;
+    }
+
+    .carousel{
+        width: 100%;
+    }
+
+    .conteneur .bloc{
+        display: flex;
+        width: 100%;
+    }
+    .conteneur .bloc img{
+        width: 50%;
+    }
+
+    .carousel p{
+        font-size:13px;
+    }
+
+    .carousel h5{
+        font-size: 18px;
+    }
+
+    /*********** RESPONSIVE VERBES *******************************/
+    .verbes h2{
+        font-size: 22px;
+    }
+
+    /*********** RESPONSIVE LIENS ****************************/
+    .liens button{
+        scale:60%;
+        right: -10%;
+    }
+}
