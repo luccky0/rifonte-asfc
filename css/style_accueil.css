@@ -10,6 +10,7 @@ h1{
 /******************************* CSS MENUS CARRES ********************************************/
 .onglets{
     display: flex;
+    text-align: center;
     justify-content: space-around;
     position: relative;
     margin: 2%;
