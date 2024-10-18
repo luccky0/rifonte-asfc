@@ -193,7 +193,7 @@ header img {
 }
 
 .proposal-card {
-    background: linear-gradient(to right, #98bde5, #38b3f5);
+    background: linear-gradient(to right, #022d5d, #011E0B);
     padding: 20px;
     border-radius: 10px;
     width: 25%;
@@ -256,3 +256,4 @@ footer a {
 }
 
 
+body.da
