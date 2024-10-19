@@ -310,9 +310,14 @@ body.dark-mode footer {
     cursor: pointer;
 }
 body.dark-mode .about-section{
-    background-color: black;
+    background-color: #000000;
     color: white;
 }
+body.dark-mode .info-blocks-large{
+    background: linear-gradient(grey,darkslategray);
+    color: #d7f6df;
+}
+
 body.dark-mode #toggle-dark-mode {
     background-color: #f72664;
 }
