@@ -1,9 +1,8 @@
-// Attendre que le DOM soit complètement chargé
 document.addEventListener("DOMContentLoaded", function() {
-    // Créer un bouton pour le mode sombre
+    // Créer un bouton
     const button = document.createElement("button");
     button.id = "toggle-dark-mode";
-    button.textContent = "🌙";
+    button.textContent = "🌙"; // Utiliser un symbole de lune pour le mode sombre
 
     // Ajouter le bouton au body
     document.body.appendChild(button);
@@ -16,9 +15,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Changer le texte du bouton selon le mode actuel
         if (body.classList.contains('dark-mode')) {
-            button.textContent = "☀️";
+            button.textContent = "☀️"; // Changer à un symbole de soleil
         } else {
-            button.innerText="🌙";
+            button.textContent = "🌙"; // Remettre à un symbole de lune
         }
     });
 });

@@ -1,9 +1,14 @@
-
+#toggle-dark-mode{
+    position : fixed ;
+    z-index: 1000;
+    margin-top: 120px;
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    /*background-color: #f5f5f5;*/
+    background-color: #f5f5f5;
+    color: black;
 }
 
 header {
@@ -194,10 +199,10 @@ header img {
 
 .proposal-card {
     background: linear-gradient(to right, #022d5d, #011E0B);
+    color : white;
     padding: 20px;
     border-radius: 10px;
     width: 25%;
-    color: black;
 }
 
 .proposal-card h3 {
@@ -255,5 +260,59 @@ footer a {
     }
 }
 
+/* Mode sombre */
+body.dark-mode {
+    background-color: black;
+    color: white;
+}
+header {
+    background-color: #004c8c;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-body.da
+body.dark-mode header {
+    background-color: #021f4f;
+    color: #696969;
+}
+body.dark-mode .about-section{
+    background-color: grey;
+    color: saddlebrown;
+}
+body.dark-mode header a{
+    color: white;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+body.dark-mode footer {
+    background-color: #4d176e;
+    color: white;
+}
+
+/* Bouton de mode sombre */
+#toggle-dark-mode {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1000;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+body.dark-mode .about-section{
+    background-color: black;
+    color: white;
+}
+body.dark-mode #toggle-dark-mode {
+    background-color: #f72664;
+}
