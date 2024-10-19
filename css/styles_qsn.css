@@ -317,7 +317,10 @@ body.dark-mode .info-blocks-large{
     background: linear-gradient(grey,darkslategray);
     color: #d7f6df;
 }
-
+body.dark-mode .intro{
+    background: linear-gradient(blue,darkblue);
+    color: white;
+}
 body.dark-mode #toggle-dark-mode {
     background-color: #f72664;
 }
