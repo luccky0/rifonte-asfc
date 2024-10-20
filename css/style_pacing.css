@@ -1,0 +1,363 @@
+#toggle-dark-mode{
+    position : fixed ;
+    z-index: 1000;
+    margin-top: 120px;
+}
+html {
+    height: 100%; /* Ensure full height for the document */
+    font-size: 16px; /* Base font size */
+    scroll-behavior: smooth; /* Smooth scrolling */
+    box-sizing: border-box; /* Simplifies box model */
+}
+
+*, *::before, *::after {
+    box-sizing: inherit; /* Apply box-sizing to all elements */
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: black;
+}
+
+header {
+    background-color: #004c8c;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+header img {
+    height: 50px;
+}
+
+.header-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.don-btn {
+    background-color: #f72664;
+    color: white;
+    padding: 10px 20px;
+    margin-right: 15px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.adh-btn {
+    background-color: #004c8c;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 2px solid white;
+}
+
+.intro {
+    text-align: center;
+    /*padding: 40px;*/
+    background-color: white;
+}
+
+.intro h1 {
+    color: #000;
+    font-size: 2em;
+}
+/*
+.info-blocks {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.info-block {
+    width: 25%;
+    background-color: #e0f4f8;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    color: #000;
+}
+
+.block1 {
+    background-color: #aad6df;
+}
+
+.block2 {
+    background-color: #73c0db;
+}
+
+.block3 {
+    background-color: #c3b5d9;
+}*/
+
+/******************************* CSS MENUS CARRES ********************************************/
+.onglets{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    margin: 2%;
+}
+
+.onglets div{
+    width:21%;
+    border-radius: 15px;
+    box-shadow: 7px 7px 10px darkgrey;
+}
+
+.onglets div::after{
+    content: '';
+    padding-top:100%;
+    display: block;
+}
+
+.onglets div:hover{
+    opacity: 70%;
+    transition-duration: 0.33s;
+    font-size: 1.1em;
+}
+
+
+.title{
+    position: absolute;
+    display: flex;
+    width: 21%;
+    height: 100%;
+
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+    font-family: Arial;
+}
+
+.QuiSommesNous{
+    background-color: #4385d1;
+}
+
+.Pacing{
+    background-color: #a1d5ed;
+}
+
+.SFC{
+    background-color: #5ab4e6;
+}
+
+.DouleurChronique{
+    background-color: #abc8ff;
+}
+
+.gris{
+    background-color: rgba(217, 217, 217, 1);
+    display: flex;
+    width: 100%; 
+    height: 175px; 
+    text-align: left center;
+    color :#000
+}
+
+.echange, .WEBINAIRE {
+    flex: 1;
+    padding: 10px;
+}
+
+.WEBINAIRE {
+    text-align: center right; 
+}
+
+.livre {
+    display: flex;
+    align-items: flex-start;
+    gap: 15%;
+}
+
+.livre img {
+    max-width: 100%; 
+    height: 100%;
+}
+.livre img {
+    margin-left: 10%; 
+    margin-top: 2%;
+}
+
+.procurer h4 {
+    margin-top: 9%;
+}
+.extrait {
+    background: linear-gradient(135deg, #013B7F, #012D48, #001F11); 
+    color: white; 
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 0;
+    padding: 10px; 
+    margin-top: 2%;
+}
+
+.publication {
+    background: linear-gradient(135deg, #9867FF, #001581, #6F83EE, #0023DC); 
+    color: white; 
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 0; 
+    padding: 10px; 
+}
+.publication a {
+    color: white;
+}
+
+.prevenir {
+    position: relative;
+    max-width: 100%;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.prevenir .image {
+    float: right; 
+    margin-left: 20px; 
+}
+
+.prevenir img {
+    width: 100%; 
+    height: auto;
+}
+
+.prevenir p {
+    margin: 0 0 15px;
+    color: black;
+}
+
+.prevenir a {
+    text-decoration: underline;
+    color: black;
+}
+
+.prevenir ul {
+    margin-left: 20px;
+    list-style-type: disc;
+}
+
+
+footer {
+    background-color: #fdf8f8;
+    color: #000000;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #000000;
+    text-decoration: none;
+    font-family: "Lucida Sans";
+    margin: 0 14px;
+}
+
+body a {
+    color: black;
+}
+
+/********************************************* RESPONSIVE DESIGN POUR ECRAN TYPE SMARTPHONE ***************************************/
+@media screen and (max-width:599px) {
+    /************************************** RESPONSIVE MENUS CARRES *************************************/
+    .onglets {
+        flex-direction: column;
+    }
+
+    .onglets div {
+        width: 100%;
+        margin-bottom: 2%;
+        box-shadow: none;
+        border-radius: 7px;
+    }
+
+    .onglets div::after {
+        content: '';
+        padding-top: 12%;
+        display: block;
+
+    }
+
+    .title {
+        width: 100%;
+        height: 29%;
+    }
+}
+
+/* Mode sombre */
+body.dark-mode {
+    background-color: black;
+    color: white;
+}
+header {
+    background-color: #004c8c;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body.dark-mode header {
+    background-color: #021f4f;
+    color: #696969;
+}
+body.dark-mode .about-section{
+    background-color: grey;
+    color: saddlebrown;
+}
+body.dark-mode header a{
+    color: white;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+body.dark-mode footer {
+    background-color: #4d176e;
+    color: white;
+}
+
+/* Bouton de mode sombre */
+#toggle-dark-mode {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1000;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+body.dark-mode .about-section{
+    background-color: #000000;
+    color: white;
+}
+body.dark-mode .info-blocks-large{
+    background: linear-gradient(grey,darkslategray);
+    color: #d7f6df;
+}
+body.dark-mode .intro{
+    background: linear-gradient(blue,darkblue);
+    color: white;
+}
+body.dark-mode #toggle-dark-mode {
+    background-color: #f72664;
+}

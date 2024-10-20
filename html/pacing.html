@@ -6,7 +6,7 @@
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='../css/style_pacing.css'>
-    <script src='../js/animation.js'></script>
+    <script src='../js/animation.js' defer></script>
 </head>
 <body>
     <header>
@@ -29,7 +29,7 @@
     <div class="intro">
         <h1>Association Française du Syndrome de Fatigue Chronique</h1>
         <div class="onglets">
-            <div class="Pacing"><a class="title" href="../html/Qui-sommes-nous.html">Qui Sommes nous ?</a></div>
+            <div class="QuiSommesNous"><a class="title" href="../html/Qui-sommes-nous.html">Qui Sommes nous ?</a></div>
             <div class="SFC"><a class="title" href="https://www.asso-sfc.org/syndrome-fatigue-chronique.php">Le SFC, la maladie</a></div>
             <div class="DouleurChronique"><a class="title" href="https://www.asso-sfc.org/fibromyalgie-douleur-chronique.php">La douleur chronique</a></div>
         </div>
@@ -39,39 +39,45 @@
 
     <br>
     <h2> Pacing c'est quoi ?</h2>
-    
-    <p> Il s'agit d'un ensemble d'outils et de pratiques pour adapter votre quotidien en fonction de votre niveau d'énergie disponible 
+    <div>    <p> Il s'agit d'un ensemble d'outils et de pratiques pour adapter votre quotidien en fonction de votre niveau d'énergie disponible 
         - Retrouvez-les dans le petit guide pratique du pacing conçu par l'ASFC.Vous êtes adhérent.e à l'ASFC, 
         le guide pratique du pacing vous sera envoyé gratuitement lors de votre adhésion ;
         vous pourrez également participer à des ateliers en petit groupe pour échanger sur vos pratiques du pacing et les améliorer ! 
         <a href=""> Contactez nous !</a>
-    </p>
+    </p></div>
 
-    <div id="gris">
-        <div>
+
+    <div class="gris">
+        <div class="echange">
+            <br>
             <p>Pour échanger sur les objets et astuces utiles dans le pacing :<br> <a href="https://www.facebook.com/groups/2625791651054619/?ref=share">Groupe de partage facebook Air&Go sur le " pacing" par Izaline, déléguée ASFC AURA</a><br>
                 Suivez notre blog " tutos pacing " : <br><a href="https://www.facebook.com/groups/2625791651054619/?ref=share">blog de l' ASFC sur le pacing : articles, témoignages, outils en pdf...</a>
             </p>
         </div>
-        <div>
+        <div class="WEBINAIRE">
             <h4>WEBINAIRES SUR LE PACING</h4>
-            <br>
             Oser son rythme avec le pacing (Outils, témoignages, capitalisation) - 21 novembre 2021 (1ère édition de la Journée des Fatigues):
         </div>
     </div>
-    <div id="livre">
-            <img src="../image/gide_pacing.jpg">
-            <p id="procurer"> <h4>COMMENT SE PROCURER LE PETIT GUIDE PRATIQUE DU PACING ?</h4><br>
+    <div class="livre">
+        <img src="../image/gide_pacing.jpg" alt="Petit Guide Pratique du Pacing">
+        <div class="procurer">
+            <h4>COMMENT SE PROCURER LE PETIT GUIDE PRATIQUE DU PACING ?</h4>
+            <p>
                 Ce guide pratique est adressé systématiquement à tout nouvel adhérent.<br><br>
                 Si vous n'êtes pas adhérent ou si vous souhaitez un livret supplémentaire,<br>
-                Il vous sera envoyé en précisant votre adresse complète et en réglant par virement<br>
-                le montant correspondant au coût d' envoi (affranchissement et enveloppe) soit 3 euros pour un livret<br>
-                via l'accès <a href="https://www.apayer.fr/fr/index.html?idCible=asfc-assfrancaisesyndromefatig">Monetico</a> (choisir autre dans le menu déroulant et préciser "guide pacing" sur la ligne "Référence").<br><br>
+                il vous sera envoyé en précisant votre adresse complète et en réglant par virement<br>
+                le montant correspondant au coût d'envoi (affranchissement et enveloppe) soit 3 euros pour un livret<br>
+                via l'accès <a href="https://www.apayer.fr/fr/index.html?idCible=asfc-assfrancaisesyndromefatig">Monetico</a> 
+                (choisir autre dans le menu déroulant et préciser "guide pacing" sur la ligne "Référence").<br><br>
                 Pour l'international, merci d'écrire à contact@asso-sfc.org, afin de régler le port international par virement.<br><br>
-                Pour les associations et professionnels de santé intéressés par le petit guide du pacing, écrire à contact@asso-sfc.org.
+                Pour les associations et professionnels de santé intéressés par le petit guide du pacing, écrire à 
+                <a href="mailto:contact@asso-sfc.org">contact@asso-sfc.org</a>.
             </p>
+        </div>
     </div>
-    <div id="extrait">
+    
+    <div class="extrait">
         <h2>Extrait : Editorial du PETIT GUIDE PRATIQUE DU PACING (version janvier 2023)</h2><br>
         <p>
             Vous qui lirez ce guide êtes sans doute concerné par une fatigue intense, durable, par l'épuisement, bien au-delà de la fatigue naturelle que tout le monde connaît. Comment vivre avec une « dette d'énergie » permanente ?<br>
@@ -86,46 +92,49 @@
              L'ASFC remercie très vivement tous les malades co-auteurs ou contributeurs.
         </p>
     </div>
-    <div id="publication"><h2>PUBLICATIONS INTERNATIONALES SUR LES EFFETS DU PACING</h2><br>
+    <div class="publication"><h2>PUBLICATIONS INTERNATIONALES SUR LES EFFETS DU PACING</h2>
         <p>Ghali, A., Lacombe, V., Ravaiau, C., Delattre, E., Ghali, M., Urbanski, G., & Lavigne, C. (2023). The relevance of pacing strategies in managing symptoms of post-COVID-19 syndrome. Journal of translational medicine, 21(1), 375. <br>
-            <a href="https://doi.org/10.1186/s12967-023-04229-w">Publication du Dr Ghali</a><br><br>
+            <a href="https://doi.org/10.1186/s12967-023-04229-w">Publication du Dr Ghali</a><br>
             
-            Sanal-Hayes, N.E.M., Mclaughlin, M., Hayes, L.D. et al. A scoping review of ‘Pacing' for management of Myalgic Encephalomyelitis/Chronic Fatigue Syndrome (ME/CFS): lessons learned for the long COVID pandemic. J Transl Med 21, 720 (2023).<br>
-            <a href="https://doi.org/10.1186/s12967-023-04229-w">Revue de synthèse sur le pacing dans l'EM/SFC et le Covid Long</a> <br><br>
+            Sanal-Hayes, N.E.M., Mclaughlin, M., Hayes, L.D. et al. A scoping review of 'Pacing' for management of Myalgic Encephalomyelitis/Chronic Fatigue Syndrome (ME/CFS): lessons learned for the long COVID pandemic. J Transl Med 21, 720 (2023).<br>
+            <a href="https://doi.org/10.1186/s12967-023-04229-w">Revue de synthèse sur le pacing dans l'EM/SFC et le Covid Long</a> <br>
             
             Barakou, I., Hackett, K. L., Finch, T., & Hettinga, F. J. (2023). Self-regulation of effort for a better health-related quality of life: a multidimensional activity pacing model for chronic pain and fatigue management. Annals of medicine, 55(2), 2270688. <br>
-            <a href="https://doi.org/10.1080/07853890.2023.2270688">L'auto-régulation de l'activité pour une meilleure qualité de vie</a><br><br>
+            <a href="https://doi.org/10.1080/07853890.2023.2270688">L'auto-régulation de l'activité pour une meilleure qualité de vie</a><br>
             
             Casson, S., Jones, M. D., Cassar, J., Kwai, N., Lloyd, A. R., Barry, B. K., & Sandler, C. X. (2022). The effectiveness of activity pacing interventions for people with chronic fatigue syndrome: a systematic review and meta-analysis. Disability and rehabilitation, 1–15. Advance online publication. <br>
             <a href="https://doi.org/10.1080/09638288.2022.2135776">Revue de synthèse sur le pacing dans l'EM/SFC</a><br></p>
     </div>
-    <div>LE MALAISE POST-EFFORT ou EXACERBATION POST-EFFORT DES SYMPTOMES et COMMENT LE PREVENIR
-        <p>
-        Description et gestion du malaise post-effort
+    <div class="prevenir">
+        <h2>LE MALAISE POST-EFFORT ou EXACERBATION POST-EFFORT DES SYMPTOMES et COMMENT LE PREVENIR</h2>
+        <p>Description et gestion du malaise post-effort</p>
+        <div class="image">
+            <img src="../image/img_fatique.png" alt="Image de fatigue">
+        </div>
+        <h3>ARTICLE DE FRANCE ASSOS SANTE SUR LE PACING</h3>
+        <a href="https://www.france-assos-sante.org/2021/07/12/epuisement-et-pacing-une-methode-pour-apprendre-a-economiser-et-mieux-gerer-son-energie/">Lire l'article</a>
         
-        ARTICLE DE FRANCE ASSOS SANTE SUR LE PACING
-        Lire l'article
+        <h3>ECHELLES DE CAPACITE ET DE SEVERITE DE l'EM/SFC</h3>
+        <p>Copyright Jodid Basset (2005) pour la HFME Hummingbird's Foundation for ME (Australie)</p>
         
-        ECHELLES DE CAPACITE ET DE SEVERITE DE l'EM/SFC
-        Copyright Jodid Basset (2005) pour la HFME Hummingbird's Foundation for ME (Australie)
-        Voir les échelles
-        Echelle en 3 parties :
-        Partie 1. Echelle de capacité physique EM/SFC
-        Partie 2. Echelle de capacité cognitive EM/SFC
-        Partie 3. Echelle sévérité des symptômes EM/SFC
-        
-        APPLICATIONS DE PACING SUR SMARTPHONE
-        Appli ME/CFS Pacing, de l'association EMERGE (Australie) : Cette application est conçue pour aider les personnes atteintes d'EM / SFC légère à modérée à mieux gérer leur consommation d'énergie quotidienne afin d'améliorer leur qualité de vie. Télécharger l'application 
-        site de <a href="https://www.emerge.org.au/news/mecfs-pacing-app-2/">EMERGE</a> 
-        
-        
-        COMMUNIQUE DE PRESSE DE L'ASFC SUR LA GESTION POST-COVID
-        Que faire lorsque la fatigue se prolonge sur plusieurs mois ?
-        
-        <a href="https://www.asso-sfc.org/documents/100-Communique-de-l-ASFC-sur-la-gestion--de-la-fatigue-post-covid-062020.pdf"> Communiqué de l' ASFC sur la gestion de la fatigue post-covid 06.2020</a></p>
 
-        <img src="../image/img_fatique.png" alt="...">
+        
+        <a href="https://www.asso-sfc.org/documents/100-Voir-les-echelles-.pdf">Voir les échelles</a>
+        <p>Echelle en 3 parties :</p>
+        <ul>
+            <li>Partie 1. Echelle de capacité physique EM/SFC</li>
+            <li>Partie 2. Echelle de capacité cognitive EM/SFC</li>
+            <li>Partie 3. Echelle sévérité des symptômes EM/SFC</li>
+        </ul>
+        
+        <h3>APPLICATIONS DE PACING SUR SMARTPHONE</h3>
+        <p>Appli ME/CFS Pacing, de l'association EMERGE (Australie) : Cette application est conçue pour aider les personnes atteintes d'EM / SFC légère à modérée à mieux gérer leur consommation d'énergie quotidienne afin d'améliorer leur qualité de vie. Télécharger l'application sur le site de <a href="https://www.emerge.org.au/news/mecfs-pacing-app-2/">EMERGE</a></p>
+        
+        <h3>COMMUNIQUE DE PRESSE DE L'ASFC SUR LA GESTION POST-COVID</h3>
+        <p>Que faire lorsque la fatigue se prolonge sur plusieurs mois ?</p>
+        <a href="https://www.asso-sfc.org/documents/100-Communique-de-l-ASFC-sur-la-gestion--de-la-fatigue-post-covid-062020.pdf">Communiqué de l'ASFC sur la gestion de la fatigue post-covid 06.2020</a>
     </div>
+    
 
 <footer>
     <a href="#">Liens utiles</a>
