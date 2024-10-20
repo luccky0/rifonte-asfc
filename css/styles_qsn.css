@@ -19,6 +19,7 @@ header {
     align-items: center;
 }
 
+
 header a {
     color: white;
     text-decoration: none;
@@ -184,7 +185,7 @@ header img {
 }
 
 .propositions {
-    background-color: #004c8c;
+    background: linear-gradient(to right, #022d5d, #011E0B);
     color: white;
     padding: 40px;
     text-align: center;
@@ -198,7 +199,7 @@ header img {
 }
 
 .proposal-card {
-    background: linear-gradient(to right, #022d5d, #011E0B);
+    background: #b0cdff;
     color : white;
     padding: 20px;
     border-radius: 10px;
@@ -229,7 +230,7 @@ footer {
 footer a {
     color: #000000;
     text-decoration: none;
-    font-family: "Lucida Sans";
+    font-family: Arial;
     margin: 0 14px;
 }
 
@@ -260,18 +261,24 @@ footer a {
     }
 }
 
-/* Mode sombre */
+/********************************* CSS Mode sombre ***********************************************/
 body.dark-mode {
-    background-color: black;
+    background-color: #444444;
     color: white;
 }
+
+
+body.dark-mode h1{
+    color: white;
+}
+/*
 header {
     background-color: #004c8c;
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
+}*/
 
 body.dark-mode header {
     background-color: #021f4f;
@@ -291,7 +298,11 @@ header a {
 }
 
 body.dark-mode footer {
-    background-color: #4d176e;
+    background-color: #252525;
+
+}
+
+body.dark-mode footer a{
     color: white;
 }
 
@@ -310,15 +321,25 @@ body.dark-mode footer {
     cursor: pointer;
 }
 body.dark-mode .about-section{
-    background-color: #000000;
+    background-color: #252525;
     color: white;
 }
+
+body.dark-mode .propositions{
+    background: #444444;
+}
+
+body.dark-mode .proposal-card {
+    background: black;
+}
+
+
 body.dark-mode .info-blocks-large{
-    background: linear-gradient(grey,darkslategray);
-    color: #d7f6df;
+    background: black;
+    color: white;
 }
 body.dark-mode .intro{
-    background: linear-gradient(blue,darkblue);
+    background: #444444;
     color: white;
 }
 body.dark-mode #toggle-dark-mode {

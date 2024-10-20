@@ -282,20 +282,6 @@ p{
     .onglets{
         flex-direction: column;
     }
-    /*
-    .onglets div{
-        width: 100%;
-        height: 50px;
-        box-shadow: none;
-    }
-    .onglets div::after{
-        content: none;
-        padding-top:0;
-    }
-    .title{
-        width: 100%;
-        height: 100%;
-    }*/
 
     .onglets div{
         width: 100%;
@@ -330,6 +316,7 @@ p{
     .conteneur .bloc{
         display: flex;
         width: 100%;
+        margin-top: 2%;
     }
     .conteneur .bloc img{
         width: 50%;
@@ -351,6 +338,65 @@ p{
     /*********** RESPONSIVE LIENS ****************************/
     .liens button{
         scale:60%;
-        right: -10%;
+        right: 0;
     }
+}
+
+
+/******************************************* CSS MODE SOMBRE **********************************************************/
+
+/* Bouton de mode sombre */
+#toggle-dark-mode {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1000;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+body.dark-mode #toggle-dark-mode {
+    background-color: #f72664;
+}
+
+body.dark-mode{
+    background-color: #444444;
+}
+
+body.dark-mode h1{
+    color: white;
+}
+
+body.dark-mode .onglets{
+    background-color: #444444;
+}
+
+body.dark-mode p{
+    color: white;
+}
+
+body.dark-mode .verbes{
+    background: #252525;
+}
+
+body.dark-mode .liens{
+    background: #252525;
+}
+
+body.dark-mode .conteneur .bloc:nth-of-type(2){
+    background:#d3d3d3;
+}
+
+body.dark-mode .liens button{
+    background-color: black;
+    color: white;
+}
+
+body.dark-mode .liens button:hover{
+    background-color: #353535;
 }
