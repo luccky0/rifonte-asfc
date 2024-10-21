@@ -254,6 +254,7 @@ footer a {
         font-size: 25px;
     }
 }
+
 /********************************************* RESPONSIVE DESIGN INTERMEDIAIRE ***************************************/
 @media screen and (min-width:600px) and (max-width:1484px){
     /*********** RESPONSIVE CAROUSEL ****************************/

@@ -30,7 +30,7 @@ header {
 }
 
 header a {
-    color: white;
+    color: white !important;
     text-decoration: none;
     margin-right: 20px;
 }
@@ -298,6 +298,7 @@ body a {
 }
 
 /* Mode sombre */
+/*
 body.dark-mode {
     background-color: black;
     color: white;
@@ -333,6 +334,7 @@ body.dark-mode footer {
 }
 
 /* Bouton de mode sombre */
+/*
 #toggle-dark-mode {
     position: fixed;
     bottom: 10px;
@@ -356,6 +358,86 @@ body.dark-mode .info-blocks-large{
 }
 body.dark-mode .intro{
     background: linear-gradient(blue,darkblue);
+    color: white;
+}
+body.dark-mode #toggle-dark-mode {
+    background-color: #f72664;
+}*/
+
+/********************************* CSS Mode sombre ***********************************************/
+body.dark-mode {
+    background-color: #444444;
+    color: white;
+}
+
+
+body.dark-mode h1{
+    color: white;
+}
+
+body.dark-mode header {
+    background-color: #021f4f;
+    color: #696969;
+}
+body.dark-mode header a{
+    color: white;
+}
+
+body.dark-mode footer {
+    background-color: #252525;
+
+}
+
+body.dark-mode footer a{
+    color: white;
+}
+
+/* Bouton de mode sombre */
+#toggle-dark-mode {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1000;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+body.dark-mode .gris{
+    background: #000000;
+    color: white;
+}
+
+body.dark-mode .livre{
+    background: #252525;
+}
+
+body.dark-mode .extrait{
+    background: #444444;
+}
+
+body.dark-mode .publication{
+    background: #252525;
+}
+
+body.dark-mode p{
+    color: white;
+}
+
+body.dark-mode a{
+    color: white;
+}
+
+body.dark-mode .info-blocks-large{
+    background: black;
+    color: white;
+}
+body.dark-mode .intro{
+    background: #444444;
     color: white;
 }
 body.dark-mode #toggle-dark-mode {
