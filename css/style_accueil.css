@@ -101,19 +101,25 @@ h1{
 }
 
 .carousel-caption{
+    /*
     display:flex !important;
-    flex-direction: column;
-    /*position: absolute;*/
+    flex-direction: column !important;
+    position: absolute;*/
     top: 5%;
 }
 
-.carousel-item  button{
-    box-shadow: none;
-    border: none;
+.carousel-item div div{
+    width: 25%;
+}
+.carousel-item a{
+    display: block;
+    background-color: #ececec;
     border-radius: 5px;
+    text-decoration: none;
+    color: black;
 }
 
-.carousel-item  button:hover{
+.carousel-item  a:hover{
     scale: 110%;
     background-color: #dbdbdb;
     transition: 0.1s;
