@@ -162,6 +162,17 @@ header img {
     margin-bottom: 20px;
 }
 
+#btnLireAussi{
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+#btnLireAussi:hover{
+    scale: 105%;
+    background-color: #e4e4e4 ;
+}
+
 .info-blocks-large {
     padding: 20px;
     background-color: white;
