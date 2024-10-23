@@ -206,6 +206,11 @@ header img {
     width: 25%;
 }
 
+.proposal-card:hover {
+    scale: 110%;
+    transition: 0.4s;
+}
+
 .proposal-card h3 {
     font-size: 1.5em;
     margin-bottom: 10px;
