@@ -173,6 +173,16 @@ header img {
     background-color: #e4e4e4 ;
 }
 
+#blockLinks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+}
+
+#blockLinks a:hover{
+    text-decoration: underline !important;
+}
 .info-blocks-large {
     padding: 20px;
     background-color: white;

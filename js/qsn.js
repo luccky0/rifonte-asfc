@@ -9,20 +9,33 @@ button.id="btnLireAussi";
 button.innerText="Lire aussi";
 button.addEventListener('click',displayLinks)
 
-function displayLinks(){
-    const div = document.createElement('div');
-    for(i=0;i<5;++i){
-        const a = document.createElement('a');
-        a.innerText=links.at(i).title
-        a.href=links.at(i).link
-        div.appendChild(a)
-    }
-    div.style.background="red"
-    document.body.append(div)
+const section = document.querySelector('.about-section .info-blocks-large')
+section.append(button)
 
+const div = document.createElement('div');
+for (i = 0; i < 5; ++i) {
+    const a = document.createElement('a');
+    a.innerText = links.at(i).title
+    a.href = links.at(i).link
+    a.style.textDecoration="none"
+    div.appendChild(a)
+}
+div.setAttribute('hidden',true)
+div.id="blockLinks"
+div.style.display="none"
+section.after(div)
+
+let displayed = false
+function displayLinks(){
+    if(!displayed) {
+        /*div.removeAttribute('hidden')*/
+        div.style.display="flex"
+    }
+    else
+       /* div.setAttribute('hidden','true')*/
+        div.style.display="none"
+    displayed = !displayed
 }
 
 
 
-const section = document.querySelector('.about-section .info-blocks-large')
-section.append(button)
