@@ -27,11 +27,9 @@ section.after(div)
 let displayed = false
 function displayLinks(){
     if(!displayed) {
-        /*div.removeAttribute('hidden')*/
         div.style.display="flex"
     }
     else
-       /* div.setAttribute('hidden','true')*/
         div.style.display="none"
     displayed = !displayed
 }
