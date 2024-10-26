@@ -1,28 +1,45 @@
-
 /******************************* CSS NAVBAR *************************************************/
-.navbar img{
+.navbar img {
     height: 40px;
 }
 
-.navbar{
-    position: relative !important;
-    background:linear-gradient(to right, #022d5d, #011E0B);
-    margin-bottom: 2%;
+.navbar {
+    position: relative;
+    background: linear-gradient(to right, #022d5d, #011E0B);
+    margin-bottom: 20px;
 }
 
-.navbar a:hover{
+.navbar a:hover {
     text-decoration: underline;
 }
 
 .header-buttons {
-    position: absolute !important;
+    position: absolute ;
     display: flex;
     right: 5px;
     top: 13px;
 }
 
-.header-buttons a:hover{
-    scale:105%;
+
+@media (max-width: 992px) {
+    .header-buttons {
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .don-btn,
+    .adh-btn {
+        width: 100%;
+        padding: 5px 10px;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+}
+
+.header-buttons a:hover {
+    transform: scale(1.05);
     text-decoration: none;
 }
 
@@ -30,7 +47,6 @@
     background-color: #f72664;
     color: white;
     padding: 10px 20px;
-    margin-right: 20px;
     border-radius: 5px;
     text-decoration: none;
 }
@@ -44,22 +60,23 @@
     border: 2px solid white;
 }
 
-
-#toggle-dark-mode{
-    position : fixed ;
+#toggle-dark-mode {
+    position: fixed;
     z-index: 1000;
     margin-top: 120px;
 }
+
 html {
-    height: 100%; 
-    font-size: 16px; 
-    scroll-behavior: smooth; 
-    box-sizing: border-box; 
+    height: 100%;
+    font-size: 16px;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 
 *, *::before, *::after {
-    box-sizing: inherit; 
+    box-sizing: inherit;
 }
+
 body {
     font-family: Arial, sans-serif;
     margin: 0 auto;
@@ -86,73 +103,37 @@ header img {
     height: 50px;
 }
 
-.header-buttons {
-    display: flex;
-    align-items: center;
-}
-
-.don-btn {
-    background-color: #f72664;
-    color: white;
-    padding: 10px 20px;
-    margin-right: 15px;
-    border-radius: 5px;
-    text-decoration: none;
-}
-
-.adh-btn {
-    background-color: #004c8c;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    border: 2px solid white;
-}
-
-.intro {
-    text-align: center;
-    /*padding: 40px;*/
-    background-color: white;
-}
-
-.intro h1 {
-    color: #000;
-    font-size: 2em;
-}
-
 /******************************* CSS MENUS CARRES ********************************************/
-.onglets{
+.onglets {
     display: flex;
     justify-content: space-around;
     position: relative;
     margin: 2%;
 }
 
-.onglets div{
-    width:21%;
+.onglets div {
+    width: 21%;
     border-radius: 15px;
     box-shadow: 7px 7px 10px darkgrey;
 }
 
-.onglets div::after{
+.onglets div::after {
     content: '';
-    padding-top:100%;
+    padding-top: 100%;
     display: block;
 }
 
-.onglets div:hover{
+.onglets div:hover {
     opacity: 70%;
     transition-duration: 0.33s;
     font-size: 1.1em;
 }
 
-
-.title{
+.title {
     position: absolute;
     display: flex;
     width: 21%;
     height: 100%;
-
     border-radius: 15px;
     justify-content: center;
     align-items: center;
@@ -162,29 +143,18 @@ header img {
     font-family: Arial;
 }
 
-.QuiSommesNous{
-    background-color: #4385d1;
-}
+.QuiSommesNous { background-color: #4385d1; }
+.Pacing { background-color: #a1d5ed; }
+.SFC { background-color: #5ab4e6; }
+.DouleurChronique { background-color: #abc8ff; }
 
-.Pacing{
-    background-color: #a1d5ed;
-}
-
-.SFC{
-    background-color: #5ab4e6;
-}
-
-.DouleurChronique{
-    background-color: #abc8ff;
-}
-
-.gris{
+.gris {
     background-color: rgba(217, 217, 217, 1);
     display: flex;
-    width: 100%; 
-    height: 175px; 
+    width: 100%;
+    height: 175px;
     text-align: left center;
-    color :#000
+    color: #000;
 }
 
 .echange, .WEBINAIRE {
@@ -192,9 +162,7 @@ header img {
     padding: 10px;
 }
 
-.WEBINAIRE {
-    text-align: center right; 
-}
+.WEBINAIRE { text-align: center right; }
 
 .livre {
     display: flex;
@@ -203,38 +171,34 @@ header img {
 }
 
 .livre img {
-    max-width: 100%; 
+    max-width: 100%;
     height: 100%;
-}
-.livre img {
-    margin-left: 10%; 
+    margin-left: 10%;
     margin-top: 2%;
 }
 
-.procurer h4 {
-    margin-top: 9%;
-}
+.procurer h4 { margin-top: 9%; }
+
 .extrait {
-    background: linear-gradient(135deg, #013B7F, #012D48, #001F11); 
-    color: white; 
+    background: linear-gradient(135deg, #013B7F, #012D48, #001F11);
+    color: white;
     font-size: 16px;
     line-height: 1.8;
     margin: 0;
-    padding: 10px; 
+    padding: 10px;
     margin-top: 2%;
 }
 
 .publication {
-    background: linear-gradient(135deg, #9867FF, #001581, #6F83EE, #0023DC); 
-    color: white; 
+    background: linear-gradient(135deg, #9867FF, #001581, #6F83EE, #0023DC);
+    color: white;
     font-size: 16px;
     line-height: 1.8;
-    margin: 0; 
-    padding: 10px; 
+    margin: 0;
+    padding: 10px;
 }
-.publication a {
-    color: white;
-}
+
+.publication a { color: white; }
 
 .prevenir {
     position: relative;
@@ -245,31 +209,18 @@ header img {
     line-height: 1.8;
 }
 
-.prevenir .image {
-    float: right; 
-    margin-left: 20px; 
-}
+.prevenir .image { float: right; margin-left: 20px; }
 
-.prevenir img {
-    width: 100%; 
-    height: auto;
-}
+.prevenir img { width: 100%; height: auto; }
 
-.prevenir p {
-    margin: 0 0 15px;
-    color: black;
-}
+.prevenir p { margin: 0 0 15px; color: black; }
 
 .prevenir a {
     text-decoration: underline;
     color: black;
 }
 
-.prevenir ul {
-    margin-left: 20px;
-    list-style-type: disc;
-}
-
+.prevenir ul { margin-left: 20px; list-style-type: disc; }
 
 footer {
     background-color: #fdf8f8;
@@ -285,13 +236,10 @@ footer a {
     margin: 0 14px;
 }
 
-body a {
-    color: black;
-}
+body a { color: black; }
 
-/********************************************* RESPONSIVE DESIGN POUR ECRAN TYPE SMARTPHONE ***************************************/
-@media screen and (max-width:599px) {
-    /************************************** RESPONSIVE MENUS CARRES *************************************/
+/*********************** RESPONSIVE DESIGN POUR ECRAN TYPE SMARTPHONE ***********************/
+@media screen and (max-width: 599px) {
     .onglets {
         flex-direction: column;
     }
@@ -304,10 +252,7 @@ body a {
     }
 
     .onglets div::after {
-        content: '';
         padding-top: 12%;
-        display: block;
-
     }
 
     .title {
@@ -316,33 +261,41 @@ body a {
     }
 }
 
-
-/********************************* CSS Mode sombre ***********************************************/
+/********************************* CSS Mode sombre *******************************************/
 body.dark-mode {
     background-color: #444444;
     color: white;
 }
 
-
-body.dark-mode h1{
-    color: white;
-}
+body.dark-mode h1 { color: white; }
 
 body.dark-mode header {
     background-color: #021f4f;
     color: #696969;
 }
-body.dark-mode header a{
-    color: white;
-}
 
-body.dark-mode footer {
-    background-color: #252525;
+body.dark-mode header a { color: white; }
 
-}
+body.dark-mode footer { background-color: #252525; }
 
-body.dark-mode footer a{
-    color: white;
+body.dark-mode footer a { color: white; }
+
+body.dark-mode .gris { background: #000000; color: white; }
+
+body.dark-mode .livre { background: #252525; }
+
+body.dark-mode .extrait { background: #444444; }
+
+body.dark-mode .publication { background: #252525; }
+
+body.dark-mode p, body.dark-mode a { color: white; }
+
+body.dark-mode .info-blocks-large { background: black; color: white; }
+
+body.dark-mode .intro { background: #444444; color: white; }
+
+body.dark-mode #toggle-dark-mode {
+    background-color: #f72664;
 }
 
 /* Bouton de mode sombre */
@@ -358,41 +311,4 @@ body.dark-mode footer a{
     padding: 10px;
     font-size: 20px;
     cursor: pointer;
-}
-
-body.dark-mode .gris{
-    background: #000000;
-    color: white;
-}
-
-body.dark-mode .livre{
-    background: #252525;
-}
-
-body.dark-mode .extrait{
-    background: #444444;
-}
-
-body.dark-mode .publication{
-    background: #252525;
-}
-
-body.dark-mode p{
-    color: white;
-}
-
-body.dark-mode a{
-    color: white;
-}
-
-body.dark-mode .info-blocks-large{
-    background: black;
-    color: white;
-}
-body.dark-mode .intro{
-    background: #444444;
-    color: white;
-}
-body.dark-mode #toggle-dark-mode {
-    background-color: #f72664;
 }
