@@ -20,7 +20,6 @@ for (i = 0; i < 5; ++i) {
     a.style.textDecoration="none"
     div.appendChild(a)
 }
-div.setAttribute('hidden',true)
 div.id="blockLinks"
 div.style.display="none"
 section.after(div)
