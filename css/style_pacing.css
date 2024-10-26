@@ -1,3 +1,50 @@
+
+/******************************* CSS NAVBAR *************************************************/
+.navbar img{
+    height: 40px;
+}
+
+.navbar{
+    position: relative !important;
+    background:linear-gradient(to right, #022d5d, #011E0B);
+    margin-bottom: 2%;
+}
+
+.navbar a:hover{
+    text-decoration: underline;
+}
+
+.header-buttons {
+    position: absolute !important;
+    display: flex;
+    right: 5px;
+    top: 13px;
+}
+
+.header-buttons a:hover{
+    scale:105%;
+    text-decoration: none;
+}
+
+.don-btn {
+    background-color: #f72664;
+    color: white;
+    padding: 10px 20px;
+    margin-right: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.adh-btn {
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 2px solid white;
+}
+
+
 #toggle-dark-mode{
     position : fixed ;
     z-index: 1000;
