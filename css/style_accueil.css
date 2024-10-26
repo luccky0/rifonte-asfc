@@ -1,5 +1,49 @@
 body{
 }
+/******************************* CSS NAVBAR *************************************************/
+.navbar img{
+    height: 40px;
+}
+
+.navbar{
+    position: relative !important;
+    background:linear-gradient(to right, #022d5d, #011E0B);
+    margin-bottom: 2%;
+}
+
+.navbar a:hover{
+    text-decoration: underline;
+}
+
+.header-buttons {
+    position: absolute !important;
+    display: flex;
+    right: 5px;
+    top: 13px;
+}
+
+.header-buttons a:hover{
+    scale:105%;
+    text-decoration: none;
+}
+
+.don-btn {
+    background-color: #f72664;
+    color: white;
+    padding: 10px 20px;
+    margin-right: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.adh-btn {
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 2px solid white;
+}
 /******************************* CSS H1 : NOM ASSO ******************************************/
 h1{
     text-align: center;
@@ -220,20 +264,27 @@ footer a {
 }
 
 
-/* Réduire la taille du bouton en mode mobile */
-@media screen and (max-width: 599px) {
-    .dark-mode-btn {
-        padding: 8px;
-        font-size: 16px;
-        right: 10px;
-        top: 10px;
+/********************************************* RESPONSIVE DESIGN INTERMEDIAIRE ***************************************/
+@media screen and (min-width:600px) and (max-width:1484px){
+    /*********** RESPONSIVE CAROUSEL ****************************/
+    .carousel p{
+        font-size:16px;
+    }
+
+
+    /*********** RESPONSIVE VERBES *******************************/
+    .verbes h2{
+        font-size: 26px;
     }
 }
 
 /********************************************* RESPONSIVE DESIGN POUR ECRAN TYPE TABLETTE ******************************/
 
 @media screen and (min-width: 600px) and (max-width: 1200px){
-
+    /******************************* RESPONSIVE BOUTONS NAVBAR *************************************************************/
+    .header-buttons {
+        right: 12%;
+    }
     /******************************* RESPONSIVE CONTENEUR : CARROUSEL + IMAGE + TEXTE ********************************************/
     .conteneur{
         flex-direction: column;
@@ -261,22 +312,20 @@ footer a {
     }
 }
 
-/********************************************* RESPONSIVE DESIGN INTERMEDIAIRE ***************************************/
-@media screen and (min-width:600px) and (max-width:1484px){
-    /*********** RESPONSIVE CAROUSEL ****************************/
-    .carousel p{
-        font-size:16px;
-    }
 
-
-    /*********** RESPONSIVE VERBES *******************************/
-    .verbes h2{
-        font-size: 26px;
-    }
-}
 
 /********************************************* RESPONSIVE DESIGN POUR ECRAN TYPE SMARTPHONE ***************************************/
 @media screen and (max-width:599px){
+    /******************************* RESPONSIVE BOUTONS NAVBAR *************************************************************/
+    .header-buttons {
+        font-size: 12px;
+        right: 16%;
+
+    }
+
+    .don-btn {
+        margin-right: 11px;
+    }
     /************************************** RESPONSIVE MENUS CARRES *************************************/
 
     .onglets{

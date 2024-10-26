@@ -20,40 +20,44 @@ body {
     color: black;
 }
 
-header {
-    background-color: #004c8c;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/******************************* CSS NAVBAR *************************************************/
+.navbar img{
+    height: 40px;
 }
 
-header a {
-    color: white !important;
-    text-decoration: none;
-    margin-right: 20px;
+.navbar{
+    position: relative !important;
+    background:linear-gradient(to right, #022d5d, #011E0B);
+    margin-bottom: 2%;
 }
 
-header img {
-    height: 50px;
+.navbar a:hover{
+    text-decoration: underline;
 }
 
 .header-buttons {
+    position: absolute !important;
     display: flex;
-    align-items: center;
+    right: 5px;
+    top: 13px;
+}
+
+.header-buttons a:hover{
+    scale:105%;
+    text-decoration: none;
 }
 
 .don-btn {
     background-color: #f72664;
     color: white;
     padding: 10px 20px;
-    margin-right: 15px;
+    margin-right: 20px;
     border-radius: 5px;
     text-decoration: none;
 }
 
 .adh-btn {
-    background-color: #004c8c;
+    background-color: transparent;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -268,9 +272,28 @@ footer a {
 body a {
     color: black;
 }
+/********************************************* RESPONSIVE DESIGN POUR ECRAN TYPE TABLETTE ******************************/
+
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+    /******************************* RESPONSIVE BOUTONS NAVBAR *************************************************************/
+    .header-buttons {
+        right: 12%;
+    }
+}
 
 /********************************************* RESPONSIVE DESIGN POUR ECRAN TYPE SMARTPHONE ***************************************/
 @media screen and (max-width:599px) {
+    /******************************* RESPONSIVE BOUTONS NAVBAR *************************************************************/
+    .header-buttons {
+        font-size: 12px;
+        right: 16%;
+
+    }
+
+    .don-btn {
+        margin-right: 11px;
+    }
+
     /************************************** RESPONSIVE MENUS CARRES *************************************/
     .onglets {
         flex-direction: column;
