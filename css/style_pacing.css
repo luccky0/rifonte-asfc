@@ -14,7 +14,7 @@
 }
 
 .header-buttons {
-    position: absolute ;
+    position: absolute;
     display: flex;
     right: 5px;
     top: 13px;
@@ -43,16 +43,20 @@
     text-decoration: none;
 }
 
+
 .don-btn {
     background-color: #f72664;
     color: white;
+    margin: auto;
     padding: 10px 20px;
+    margin: auto 20px;
     border-radius: 5px;
     text-decoration: none;
 }
 
 .adh-btn {
     background-color: transparent;
+    margin: auto;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
