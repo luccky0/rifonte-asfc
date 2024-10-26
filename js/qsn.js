@@ -20,7 +20,6 @@ for (i = 0; i < 5; ++i) {
     a.style.textDecoration="none"
     div.appendChild(a)
 }
-div.setAttribute('hidden',true)
 div.id="blockLinks"
 div.style.display="none"
 section.after(div)
@@ -28,11 +27,9 @@ section.after(div)
 let displayed = false
 function displayLinks(){
     if(!displayed) {
-        /*div.removeAttribute('hidden')*/
         div.style.display="flex"
     }
     else
-       /* div.setAttribute('hidden','true')*/
         div.style.display="none"
     displayed = !displayed
 }
