@@ -26,20 +26,22 @@
 }
 
 /* Responsive for small screens */
-@media (max-width: 992px) {
+@media (max-width: 991px) {
     .header-buttons {
         position: relative;
         flex-direction: column;
         align-items: center;
-        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
-    .don-btn,
+    .header-buttons a:hover {
+        transform: scale(1.02);
+    }
+
     .adh-btn {
         width: 100%;
         padding: 5px 10px;
         font-size: 14px;
-        margin-bottom: 5px;
     }
 }
 
