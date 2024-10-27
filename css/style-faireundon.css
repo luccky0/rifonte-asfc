@@ -160,8 +160,13 @@ h1{
 .DouleurChronique { background-color: #abc8ff; }
 
 /**************************** CSS PARAGRAPHES PAGE ACCUEIL ************************************************/
-p{
-    margin: 2%;
+.titre{
+    font-weight: bold;
+    text-align: center;
+}
+
+.explication p{
+    margin: 5%;
     text-align: justify;
     font-size: 25px;
     font-family: Arial;
@@ -177,16 +182,63 @@ p{
     display: flex;
     flex-direction: column;
     padding: 20px; 
-    background-color: #D9D9D9; 
+    background: linear-gradient( rgb(35, 78, 170) 0%, rgba(48, 131, 151, 0.628) 100%); }
+
+.gris p, .gris h2{
+    font-weight:620;
+    
+    color: white;
+    text-align: center;
+}
+.gris a{text-decoration:none}
+
+.echange{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.echange .donbutton{
+    color: black;
+    background-color: white;
+    font-weight:620;
+    text-align: center;
+    border-radius: 20px;
+    width: 25%;
+    margin-top: 5%;
+    padding: 14px;
+}
+.imgdon{
+    margin-left: 75%;
+    margin-top: 5%;
+}
+.webinaire{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.webinaire .donbutton{
+    color: black;
+    background-color: white;
+    font-weight:620;
+    text-align: center;
+    border-radius: 20px;
+    width: 60%;
+    margin-top: 5%;
+    padding: 14px;
+
+}
+.donbutton{
+    transition-duration: 1s;
+
+}
+.donbutton:hover {
+    opacity: 70%;
+    transition-duration: 1s;
+    scale: 1.2;
 }
 
-.echange {
-    margin-bottom: 20px; 
-}
-
-.webinaire {
-    max-width: 600px; 
-}
 
 @media (min-width: 768px) {
     .gris {
@@ -364,10 +416,7 @@ body.dark-mode footer a {
     color: white;
 }
 
-body.dark-mode .gris {
-    background: #000000; 
-    color: white; 
-}
+
 
 body.dark-mode .livre {
     background: #252525; 
