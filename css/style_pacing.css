@@ -101,6 +101,14 @@ header img {
     height: 50px;
 }
 
+/******************************* CSS H1 : NOM ASSO ******************************************/
+h1{
+    text-align: center;
+    margin-bottom: 200%;
+    font-family: Arial;
+}
+
+
 /******************************* CSS MENUS CARRES ********************************************/
 .onglets {
     display: flex;
@@ -114,6 +122,10 @@ header img {
     border-radius: 15px;
     box-shadow: 7px 7px 10px darkgrey;
     position: relative;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
 }
 
 .onglets div:hover {
@@ -141,36 +153,49 @@ header img {
     font-size: 1.5em;
 }
 
-/* Background colors for different sections */
+
 .QuiSommesNous { background-color: #4385d1; }
 .Pacing { background-color: #a1d5ed; }
 .SFC { background-color: #5ab4e6; }
 .DouleurChronique { background-color: #abc8ff; }
 
+/**************************** CSS PARAGRAPHES PAGE ACCUEIL ************************************************/
+p{
+    margin: 2%;
+    text-align: justify;
+    font-size: 25px;
+    font-family: Arial;
+}
+
+.bold{
+    font-weight: bold;
+}
+
 /******************************* GRIS SECTION ***********************************************/
+
 .gris {
     display: flex;
-    flex-direction: column; /* Par défaut, en colonne pour les petits écrans */
-    padding: 20px; /* Ajoute du remplissage autour de l'élément */
-    background-color: #D9D9D9; /* Couleur de fond */
+    flex-direction: column;
+    padding: 20px; 
+    background-color: #D9D9D9; 
 }
 
 .echange {
-    margin-bottom: 20px; /* Espace entre les sections */
+    margin-bottom: 20px; 
 }
 
 .webinaire {
-    max-width: 600px; /* Limite la largeur pour les grands écrans */
+    max-width: 600px; 
 }
 
 @media (min-width: 768px) {
     .gris {
-        flex-direction: row; /* Change la disposition en ligne pour les écrans plus larges */
-        justify-content: space-between; /* Espace entre les éléments */
+        flex-direction: row; 
+        justify-content: space-between; 
     }
 
     .echange, .webinaire {
-        max-width: 45%; /* Limite la largeur de chaque section à 45% */
+        max-width: 45%; 
     }
 }
 
@@ -384,3 +409,4 @@ body.dark-mode .intro {
     font-size: 20px;
     cursor: pointer;
 }
+
