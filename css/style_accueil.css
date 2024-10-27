@@ -52,66 +52,54 @@ h1{
 }
 
 /******************************* CSS MENUS CARRES ********************************************/
-.onglets{
+.onglets {
     display: flex;
-    text-align: center;
     justify-content: space-around;
     position: relative;
     margin: 2%;
 }
 
-.onglets div{
-    width:21%;
+.onglets a {
+    width: 21%;
     border-radius: 15px;
     box-shadow: 7px 7px 10px darkgrey;
+    position: relative;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
 }
 
-.onglets div::after{
-    content: '';
-    padding-top:100%;
-    display: block;
-}
-
-.onglets div:hover{
+.onglets a:hover {
     opacity: 70%;
     transition-duration: 0.33s;
     font-size: 1.1em;
 }
 
+.onglets a::after {
+    content: '';
+    padding-top: 100%;
+    display: block;
+}
 
-.title{
+.title {
     position: absolute;
     display: flex;
-    width: 21%;
+    width: 100%; /* Utilise 100% pour s'ajuster à la largeur du parent */
     height: 100%;
-
     border-radius: 15px;
     justify-content: center;
     align-items: center;
     text-decoration: none;
     color: white;
     font-size: 1.5em;
-    font-family: Arial;
 }
 
 
-
-.QuiSommesNous{
-    background-color: #4385d1;
-}
-
-.Pacing{
-    background-color: #a1d5ed;
-}
-
-.SFC{
-    background-color: #5ab4e6;
-}
-
-.DouleurChronique{
-    background-color: #abc8ff;
-}
-
+.QuiSommesNous { background-color: #4385d1; }
+.Pacing { background-color: #a1d5ed; }
+.SFC { background-color: #5ab4e6; }
+.DouleurChronique { background-color: #abc8ff; }
 /******************************* CSS CONTENEUR : CARROUSEL + IMAGE + TEXTE ********************************************/
 
 .conteneur{
@@ -328,29 +316,26 @@ footer a {
     }
     /************************************** RESPONSIVE MENUS CARRES *************************************/
 
-    .onglets{
-        flex-direction: column;
-    }
-
-    .onglets div{
-        width: 100%;
-        margin-bottom: 2%;
-        box-shadow: none;
-        border-radius: 7px;
-    }
-
-    .onglets div::after{
-        content: '';
-        padding-top:12%;
-        display: block;
-
-    }
-
-    .title{
-        width: 100%;
-        height: 22%;
-    }
-
+        .onglets {
+            flex-direction: column;
+        }
+    
+        .onglets a {
+            width: 100%;
+            margin-bottom: 2%;
+            box-shadow: none;
+            border-radius: 7px;
+        }
+    
+        .onglets a::after {
+            padding-top: 12%;
+        }
+    
+        .title {
+            width: 100%;
+            height: 29%;
+        }
+    
 
     /******************************* RESPONSIVE CONTENEUR : CARROUSEL + IMAGE + TEXTE ********************************************/
 
