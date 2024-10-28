@@ -230,6 +230,7 @@ body {
 .proposition {
     display: flex;
     justify-content: center;
+    margin-top: 3%;
     gap: 30px;
 }
 
@@ -242,7 +243,7 @@ body {
 }
 
 .proposal-card:hover {
-    scale: 110%;
+    scale: 107%;
     transition: 0.4s;
 }
 
@@ -275,7 +276,17 @@ footer a {
 }
 @media screen and (min-width: 600px) and (max-width: 1200px) {
     /* Styles spécifiques pour les tablettes ou écrans de taille moyenne */
+    /************************************** RESPONSIVE BLOCS PROPOSITIONS *************************************/
+    .proposition {
+        margin-top: 5%;
+        flex-direction: column;
+        align-items: center;
+    }
 
+    .proposal-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }
 
 /********************************************* RESPONSIVE DESIGN POUR ECRAN TYPE SMARTPHONE ***************************************/
@@ -310,6 +321,7 @@ footer a {
 
     /************************************** RESPONSIVE BLOCS PROPOSITIONS *************************************/
     .proposition {
+        margin-top: 7%;
         flex-direction: column;
         align-items: center;
     }
