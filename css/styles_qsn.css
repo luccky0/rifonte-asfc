@@ -274,7 +274,10 @@ footer a {
     margin: 0 14px;
 }
 @media screen and (min-width: 600px) and (max-width: 1200px) {
+    /* Styles spécifiques pour les tablettes ou écrans de taille moyenne */
+
 }
+
 /********************************************* RESPONSIVE DESIGN POUR ECRAN TYPE SMARTPHONE ***************************************/
 @media screen and (max-width:599px) {
 
@@ -282,6 +285,11 @@ footer a {
 
     .onglets {
         flex-direction: column;
+    }
+    footer {
+        padding: 15px;
+        font-size: 0.9em;
+        gap: 8px;
     }
 
     .onglets a {
@@ -300,7 +308,18 @@ footer a {
         height: 29%;
     }
 
+    /************************************** RESPONSIVE BLOCS PROPOSITIONS *************************************/
+    .proposition {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .proposal-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }
+
 
 /********************************* CSS Mode sombre ***********************************************/
 body.dark-mode {
@@ -372,6 +391,9 @@ body.dark-mode .propositions{
 
 body.dark-mode .proposal-card {
     background: black;
+}
+body.dark-mode .note{
+    background-color: #d3cfcf;
 }
 
 
