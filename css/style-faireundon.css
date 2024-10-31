@@ -351,10 +351,12 @@ h1{
 
 /******************************* FOOTER STYLES ***********************************************/
 footer {
-    background-color: #fdf8f8;
+    display: flex;
+    justify-content: center;
+    background-color: #e4e4e4;
     color: #000000;
     padding: 20px;
-    text-align: center;
+    /*text-align: center;*/
 }
 
 footer a {
@@ -364,8 +366,19 @@ footer a {
     margin: 0 14px;
 }
 
+footer a:hover{
+    text-decoration: underline;
+}
+
 body a {
     color: black; 
+}
+
+/********************************************* RESPONSIVE DESIGN FOOTER PETIT ECRAN INTERMEDIAIRE ********************************/
+@media screen and (max-width:784px) {
+    footer {
+        flex-direction: column;
+    }
 }
 
 /*********************** RESPONSIVE DESIGN POUR SMARTPHONES ***********************/
@@ -422,6 +435,10 @@ body.dark-mode footer a {
 
 body.dark-mode .livre {
     background: #252525; 
+}
+
+body.dark-mode .gris {
+    background: #252525;
 }
 
 body.dark-mode .extrait {

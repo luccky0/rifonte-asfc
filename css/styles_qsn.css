@@ -87,34 +87,6 @@ body {
 .bold{
     font-weight: bold;
 }
-/*
-.info-blocks {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-}
-
-.info-block {
-    width: 25%;
-    background-color: #e0f4f8;
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
-    color: #000;
-}
-
-.block1 {
-    background-color: #aad6df;
-}
-
-.block2 {
-    background-color: #73c0db;
-}
-
-.block3 {
-    background-color: #c3b5d9;
-}*/
 
 /******************************* CSS MENUS CARRES ********************************************/
 .onglets {
@@ -193,6 +165,11 @@ body {
     flex-direction: column;
     align-items: center;
     background-color: white;
+    padding-bottom: 15px;;
+}
+
+#blockLinks a{
+    color: #022d5d;
 }
 
 #blockLinks a:hover{
@@ -262,10 +239,12 @@ body {
 }
 
 footer {
+    display: flex;
+    justify-content: center;
     background-color: #e4e4e4;
     color: #000000;
     padding: 20px;
-    text-align: center;
+    /*text-align: center;*/
 }
 
 footer a {
@@ -273,6 +252,10 @@ footer a {
     text-decoration: none;
     font-family: Arial;
     margin: 0 14px;
+}
+
+footer a:hover{
+    text-decoration: underline;
 }
 @media screen and (min-width: 600px) and (max-width: 1200px) {
     /* Styles spécifiques pour les tablettes ou écrans de taille moyenne */
@@ -287,8 +270,18 @@ footer a {
         width: 100%;
         margin-bottom: 20px;
     }
+
+    footer{
+        justify-content: flex-start;
+    }
 }
 
+/********************************************* RESPONSIVE DESIGN FOOTER PETIT ECRAN INTERMEDIAIRE ********************************/
+@media screen and (max-width:784px) {
+    footer {
+        flex-direction: column;
+    }
+}
 /********************************************* RESPONSIVE DESIGN POUR ECRAN TYPE SMARTPHONE ***************************************/
 @media screen and (max-width:599px) {
 
@@ -397,6 +390,13 @@ body.dark-mode .about-section{
     color: white;
 }
 
+body.dark-mode #blockLinks{
+    background-color: black;
+}
+
+body.dark-mode #blockLinks a{
+    color: white;
+}
 body.dark-mode .propositions{
     background: #444444;
 }

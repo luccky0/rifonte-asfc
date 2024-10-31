@@ -262,10 +262,12 @@ p{
 
 /********************** CSS FOOTER ********************************/
 footer {
-    background-color: #fdf8f8;
+    display: flex;
+    justify-content: center;
+    background-color: #e4e4e4;
     color: #000000;
     padding: 20px;
-    text-align: center;
+    /*text-align: center;*/
 }
 
 footer a {
@@ -275,6 +277,9 @@ footer a {
     margin: 0 14px;
 }
 
+footer a:hover{
+    text-decoration: underline;
+}
 
 /********************************************* RESPONSIVE DESIGN INTERMEDIAIRE ***************************************/
 @media screen and (min-width:600px) and (max-width:1484px){
@@ -320,7 +325,12 @@ footer a {
     }
 }
 
-
+/********************************************* RESPONSIVE DESIGN FOOTER PETIT ECRAN INTERMEDIAIRE ********************************/
+@media screen and (max-width:784px) {
+    footer {
+        flex-direction: column;
+    }
+}
 
 /********************************************* RESPONSIVE DESIGN POUR ECRAN TYPE SMARTPHONE ***************************************/
 @media screen and (max-width:599px){
