@@ -430,8 +430,8 @@ body.dark-mode .intro {
 /* Style du bouton pour augmenter la taille du texte */
 #augmente-la-taille-text {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 60px;
+    right: 50px;
     z-index: 1000;
     border: none;
     background-color: #000000;
@@ -444,7 +444,7 @@ body.dark-mode .intro {
 /* Style du bouton pour réduire la taille du texte */
 #reduire-la-taille-text {
     position: fixed;
-    bottom: 60px; /* Décalage pour éviter le chevauchement */
+    bottom: 60px; 
     right: 20px;
     z-index: 1000;
     border: none;
@@ -457,10 +457,10 @@ body.dark-mode .intro {
 
 /* Taille augmentée */
 body.augmente-taille {
-    font-size: 1.5em; /* Ajuste selon tes besoins */
+    font-size: 1.5em; 
 }
 
 /* Taille réduite */
 body.diminue-taille {
-    font-size: 0.8em; /* Ajuste selon tes besoins */
+    font-size: 0.8em; 
 }
