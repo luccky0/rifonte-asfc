@@ -26,25 +26,40 @@ document.addEventListener("DOMContentLoaded", () => {
     // Crée le bouton pour augmenter la taille du texte
     const btnAugmenterText = document.createElement("button");
     btnAugmenterText.id = "augmente-la-taille-text";
-    btnAugmenterText.textContent = "⬆️";
+    btnAugmenterText.innerHTML = "⬆️"; // Affiche uniquement une flèche vers le haut
 
     // Crée le bouton pour réduire la taille du texte
     const btnReduireText = document.createElement("button");
     btnReduireText.id = "reduire-la-taille-text";
-    btnReduireText.textContent = "⬇️";
+    btnReduireText.innerHTML = "⬇️"; // Affiche uniquement une flèche vers le bas
 
     // Ajoute les boutons au DOM
     document.body.appendChild(btnAugmenterText);
     document.body.appendChild(btnReduireText);
 
-    // Ajoute les événements pour augmenter et réduire la taille du texte
+    // Ajoute des événements pour manipuler la taille du texte
+    let tailleActuelle = 1; // Taille de base
+    const maxTaille = 2.5;
+    const minTaille = 0.5;
+
     btnAugmenterText.addEventListener("click", () => {
-        document.body.classList.add("augmente-taille");
-        document.body.classList.remove("diminue-taille");
+        if (tailleActuelle < maxTaille) {
+            tailleActuelle += 0.5;
+            document.body.style.fontSize = `${tailleActuelle}em`;
+        } else {
+            alert("Taille maximale atteinte !");
+        }
     });
 
     btnReduireText.addEventListener("click", () => {
-        document.body.classList.add("diminue-taille");
-        document.body.classList.remove("augmente-taille");
+        if (tailleActuelle > minTaille) {
+            tailleActuelle -= 0.5;
+            document.body.style.fontSize = `${tailleActuelle}em`;
+        } else {
+            alert("Taille minimale atteinte !");
+        }
     });
 });
+
+
+

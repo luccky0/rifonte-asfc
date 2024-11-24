@@ -426,26 +426,11 @@ body.dark-mode .intro {
     cursor: pointer;
 }
 
-
-/* Style du bouton pour augmenter la taille du texte */
-#augmente-la-taille-text {
-    position: fixed;
-    bottom: 60px;
-    right: 50px;
-    z-index: 1000;
-    border: none;
-    background-color: #000000;
-    color: white;
-    padding: 10px;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-/* Style du bouton pour réduire la taille du texte */
+/* Style commun pour les deux boutons */
+#augmente-la-taille-text,
 #reduire-la-taille-text {
     position: fixed;
-    bottom: 60px; 
-    right: 20px;
+    bottom: 60px;
     z-index: 1000;
     border: none;
     background-color: #000000;
@@ -453,14 +438,30 @@ body.dark-mode .intro {
     padding: 10px;
     font-size: 20px;
     cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Taille augmentée */
-body.augmente-taille {
-    font-size: 1.5em; 
+/* Position spécifique pour chaque bouton */
+#augmente-la-taille-text {
+    right: 60px;
 }
 
-/* Taille réduite */
-body.diminue-taille {
-    font-size: 0.8em; 
+#reduire-la-taille-text {
+    right: 10px;
+}
+
+/* Effet au survol des boutons */
+#augmente-la-taille-text:hover,
+#reduire-la-taille-text:hover {
+    background-color: #555555;
+    transform: scale(1.1);
+}
+
+/* Ajout d'un effet de clic */
+#augmente-la-taille-text:active,
+#reduire-la-taille-text:active {
+    transform: scale(1.05);
+    background-color: #333333;
 }
