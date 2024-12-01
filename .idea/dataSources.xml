@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="DATABASE" uuid="c8f4e3e7-40a7-4f2f-85a1-69c04fb67571">
-      <driver-ref>sqlite.xerial</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\lucma\PhpstormProjects\rifonte-asfc\data\DATABASE</jdbc-url>
-      <working-dir>$ProjectFileDir$</working-dir>
-    </data-source>
-    <data-source source="LOCAL" name="DATABASE [2]" uuid="6eb0bb4e-24c0-4d85-825a-aa18db108505">
+    <data-source source="LOCAL" name="DATABASE" uuid="6eb0bb4e-24c0-4d85-825a-aa18db108505">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
