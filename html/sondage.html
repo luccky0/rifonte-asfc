@@ -13,7 +13,7 @@
 <form method="post" action="../PHP/sondage.php">
     <div class="mb-3">
         <label for="age" class="form-label">Age</label>
-        <input type="number" class="form-control" id="age" >
+        <input type="number" class="form-control" id="age" name="age">
     </div>
     <div class="mb-3">
         <label for="lieuDeVie" class="form-label">Lieu de vie</label>
@@ -22,18 +22,55 @@
             <option value="1">Dans la famille en permanence</option>
             <option value="2">Dans la famille avec une solution d'accueil ou des activités en journée</option>
             <option value="3">Dans la famille principalement mais avec un accueil temporaire ou séquentiel en établissement</option>
+            <option value="4">Dans un logement indépendant</option>
+            <option value="5">Dans un habitat inclusif</option>
+            <option value="6">Dans un foyer d'accueil médicalisé (FAM)</option>
+            <option value="7">Dans une maison d'accueil spécialisé (MAS)</option>
+            <option value="8">Dans un foyer de vie ou foyer d'hébergement</option>
+            <option value="9">En IME avec internat</option>
+            <option value="10">Hospitalisation en psychatrie</option>
+            <option value="11">Autre</option>
         </select>
     </div>
     <div class="mb-3">
         <label for="activite" class="form-label">Activité scolaire ou professionnelle</label>
-        <select id="activite" class="form-select" aria-label="Default select example">
+        <select id="activite" name="activite" class="form-select" aria-label="Default select example">
             <option selected>Choisissez votre activité scolaire ou professionnelle</option>
             <option value="1">Scolarité en milieu ordinaire</option>
             <option value="2">Scolarité en dispositif spécialisé de l'Education Nationale</option>
             <option value="3">Instruction en famille</option>
+            <option value="4">Scolarisé dans un établissement médico-social (IME, IMPRO)</option>
+            <option value="5">Formation professionnelle</option>
+            <option value="6">Etudes supérieures</option>
+            <option value="7">Activité professionelle en milieu ordinaire</option>
+            <option value="8">Activité professionnelle en milieu protégé (ESAT, Entreprise adaptée)</option>
+            <option value="9">Sans aucune activité scolaire ou professionnelle</option>
+            <option value="10">Autre</option>
         </select>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <div class="mb-3">
+        <label for="qualiteVie" class="form-label">Qualité de vie</label>
+        <select id="qualiteVie" name="qualiteVie" class="form-select" aria-label="Default select example">
+            <option selected>Choisissez votre qualité de vie</option>
+            <option value="1">Très bonne, la fatigue n'impacte pas ma qualité de vie</option>
+            <option value="2">Bonne, la fatigue impacte peu ma qualité de vie</option>
+            <option value="3">Correcte, je suis souvent fatigué mais c'est supportable</option>
+            <option value="4">Moyenne, je suis très souvent fatigué et cela influe sur ma santé mentale</option>
+            <option value="5">Mauvaise, importante souffrance psychologigue et épuisement dû à la fatigue</option>
+            <option value="6">Très mauvaise, je suis très fatigué, chaque action que je fais est épuisante et mon mental est au plus bas</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="besoinSoutien" class="form-label">Avez-vous besoin de soutien?</label>
+        <select id="besoinSoutien" name="besoinSoutien" class="form-select" aria-label="Default select example">
+            <option selected>Choisissez votre soutien</option>
+            <option value="1">Non, je suis totalement autonome</option>
+            <option value="2">Oui, une aide pour tous les actes de la vie quotidienne et la présence d'une tierce personne 24h/24</option>
+            <option value="3">Oui, des interventions et stimulations ponctuelles mais quotidiennes (toilette, sorties, repas, communication...)</option>
+            <option value="4">Oui, un soutien mental au téléphone ou présentiel</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Envoyer</button>
 </form>
 
 </body>
