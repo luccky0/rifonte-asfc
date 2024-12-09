@@ -41,11 +41,14 @@ document.addEventListener("DOMContentLoaded", () => {
     let tailleActuelle = 1; // Taille de base
     const maxTaille = 2.5;
     const minTaille = 0.5;
+    const divs = document.querySelectorAll('body >div');
 
     btnAugmenterText.addEventListener("click", () => {
         if (tailleActuelle < maxTaille) {
             tailleActuelle += 0.5;
-            document.body.style.fontSize = `${tailleActuelle}em`;
+            divs.forEach(div => {
+                div.style.fontSize =`${tailleActuelle}em`;
+            });
         } else {
             alert("Taille maximale atteinte !");
         }
@@ -54,7 +57,9 @@ document.addEventListener("DOMContentLoaded", () => {
     btnReduireText.addEventListener("click", () => {
         if (tailleActuelle > minTaille) {
             tailleActuelle -= 0.5;
-            document.body.style.fontSize = `${tailleActuelle}em`;
+            divs.forEach(div => {
+                div.style.fontSize =`${tailleActuelle}em`;
+            });
         } else {
             alert("Taille minimale atteinte !");
         }
