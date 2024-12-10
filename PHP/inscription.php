@@ -9,6 +9,7 @@
 
             $db = new PDO('sqlite:../data/data.sqlite');
 
+
             $db->exec("CREATE TABLE IF NOT EXISTS adherent (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 nom TEXT NOT NULL,
