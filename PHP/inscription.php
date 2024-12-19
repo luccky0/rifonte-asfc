@@ -26,6 +26,7 @@
             $stmt->bindParam(':email', $email);
             $stmt->bindParam(':password', $password);
             $stmt->bindParam(':password', $password);
+            $stmt->bindParam(':admin',$admin) ;
             $stmt->execute();
 
             echo "Inscription réussie !";
