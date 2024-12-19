@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $_SESSION['user_nom'] = $user['nom'];
                 $_SESSION['user_prenom'] = $user['prenom'];
                 echo "Connexion réussie. Bienvenue, " . htmlspecialchars($user['prenom']) . " " . htmlspecialchars($user['nom']) . "!";
-                if($_SESSION['admin'])
+                if(!$_SESSION['admin'])
                 header('Location: ../html/sondage.html');
                 session_start();
             } else {
