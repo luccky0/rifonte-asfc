@@ -426,7 +426,9 @@ body.dark-mode .intro {
     cursor: pointer;
 }
 
-/* Style commun pour les deux boutons */
+/********************************* BOUTON AUGMENTE LE TEXT *******************************************/
+
+
 #augmente-la-taille-text,
 #reduire-la-taille-text {
     position: fixed;
@@ -443,7 +445,7 @@ body.dark-mode .intro {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Position spécifique pour chaque bouton */
+
 #augmente-la-taille-text {
     right: 60px;
 }
@@ -452,14 +454,14 @@ body.dark-mode .intro {
     right: 10px;
 }
 
-/* Effet au survol des boutons */
+
 #augmente-la-taille-text:hover,
 #reduire-la-taille-text:hover {
     background-color: #555555;
     transform: scale(1.1);
 }
 
-/* Ajout d'un effet de clic */
+
 #augmente-la-taille-text:active,
 #reduire-la-taille-text:active {
     transform: scale(1.05);
