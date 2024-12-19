@@ -26,12 +26,12 @@ document.addEventListener("DOMContentLoaded", () => {
     // Crée le bouton pour augmenter la taille du texte
     const btnAugmenterText = document.createElement("button");
     btnAugmenterText.id = "augmente-la-taille-text";
-    btnAugmenterText.innerHTML = "⬆️"; // Affiche uniquement une flèche vers le haut
+    btnAugmenterText.innerHTML = "➕"; // Affiche uniquement une flèche vers le haut
 
     // Crée le bouton pour réduire la taille du texte
     const btnReduireText = document.createElement("button");
     btnReduireText.id = "reduire-la-taille-text";
-    btnReduireText.innerHTML = "⬇️"; // Affiche uniquement une flèche vers le bas
+    btnReduireText.innerHTML = "➖"; // Affiche uniquement une flèche vers le bas
 
     // Ajoute les boutons au DOM
     document.body.appendChild(btnAugmenterText);

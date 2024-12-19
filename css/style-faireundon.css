@@ -349,6 +349,44 @@ h1{
     list-style-type: disc; 
 }
 
+#augmente-la-taille-text,
+#reduire-la-taille-text {
+    position: fixed;
+    bottom: 60px;
+    z-index: 1000;
+    border: none;
+    background-color: #000000;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+#augmente-la-taille-text {
+    right: 60px;
+}
+
+#reduire-la-taille-text {
+    right: 10px;
+}
+
+
+#augmente-la-taille-text:hover,
+#reduire-la-taille-text:hover {
+    background-color: #555555;
+    transform: scale(1.1);
+}
+
+
+#augmente-la-taille-text:active,
+#reduire-la-taille-text:active {
+    transform: scale(1.05);
+    background-color: #333333;
+}
 /******************************* FOOTER STYLES ***********************************************/
 footer {
     display: flex;
