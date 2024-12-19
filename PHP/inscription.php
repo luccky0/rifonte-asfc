@@ -16,11 +16,11 @@
                 nom TEXT NOT NULL,
                 prenom TEXT NOT NULL,
                 email TEXT NOT NULL UNIQUE,
-                password TEXT NOT NULL/*,
-                admin Boolean */
+                password TEXT NOT NULL,
+                administrateur BOOLEAN NOT NULL
             )");
 
-            $stmt = $db->prepare("INSERT INTO adherent (prenom, nom, email, password/*, admin*/) VALUES (:prenom, :nom, :email, :password/*, :admin*/)");
+            $stmt = $db->prepare("INSERT INTO adherent (prenom, nom, email, password, administrateur) VALUES (:prenom, :nom, :email, :password, false)");
             $stmt->bindParam(':nom', $nom);
             $stmt->bindParam(':prenom', $prenom);
             $stmt->bindParam(':email', $email);
