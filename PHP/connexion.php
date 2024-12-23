@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 echo "Connexion réussie. Bienvenue, " . htmlspecialchars($user['prenom']) . " " . htmlspecialchars($user['nom']) . "!";
                 //if(!$_SESSION['admin'])
                 header('Location: ../html/sondage.html');
-                session_start();
+
             } else {
                 echo "Mot de passe incorrect.";
             }
