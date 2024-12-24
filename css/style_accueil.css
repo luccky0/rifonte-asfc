@@ -260,6 +260,8 @@ p{
     background-color: #ac2929;
 }
 
+/*************** BOUTONs AUGMENTER/REDUIRE TAILLE POLICE ****************************/
+
 #augmente-la-taille-text,
 #reduire-la-taille-text {
     position: fixed;

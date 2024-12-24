@@ -1,0 +1,258 @@
+/******************************* CSS NAVBAR *************************************************/
+
+.navbar {
+    position: relative;
+    background: linear-gradient(to right, #022d5d, #011E0B);
+    margin-bottom: 20px;
+}
+
+.navbar img {
+    height: 40px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.header-buttons {
+    position: absolute;
+    display: flex;
+    right: 5px;
+    top: 13px;
+}
+
+.header-buttons a:hover {
+    transform: scale(1.05);
+    text-decoration: none;
+}
+
+/* Responsive for small screens */
+@media (max-width: 991px) {
+    .header-buttons {
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom:10px;
+    }
+    .header-buttons a:hover {
+        transform: scale(1.02);
+    }
+
+    .don-btn,
+    .adh-btn {
+        width: 100%;
+        padding: 5px 10px;
+        font-size: 14px;
+
+    }
+}
+
+/******************************* BUTTON STYLES ***********************************************/
+.don-btn {
+    background-color: #f72664;
+    color: white;
+    padding: 10px 20px;
+    margin: auto 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.adh-btn {
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/******************************* CSS H1  ******************************************/
+h1{
+    text-align: center;
+    margin-bottom: 200%;
+    font-family: Arial;
+}
+.bold{
+    font-weight: bold;
+}
+
+/*************** BOUTONS SONDAGE ET INDICATEURS ************************************/
+
+#buttons{
+    padding: 20px;
+    background: linear-gradient( rgb(35, 78, 170) 0%, rgba(48, 131, 151, 0.628) 100%);
+}
+
+#buttons h2{
+    color: white;
+    font-family: Arial;
+    font-weight: bold;
+}
+
+#buttons p{
+    color: white;
+    font-family: Arial;
+}
+.sondage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button{
+    color: black;
+    font-size: 20px;
+    font-family: Arial;
+    text-decoration: none;
+
+
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.button:hover{
+    opacity: 80%;
+    scale: 105%;
+    transition-duration: 0.2s;
+}
+
+/*************** BOUTONS AUGMENTER/REDUIRE TAILLE POLICE ****************************/
+
+#augmente-la-taille-text,
+#reduire-la-taille-text {
+    position: fixed;
+    bottom: 60px;
+    z-index: 1000;
+    border: none;
+    background-color: #000000;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+#augmente-la-taille-text {
+    right: 60px;
+}
+
+#reduire-la-taille-text {
+    right: 10px;
+}
+
+
+#augmente-la-taille-text:hover,
+#reduire-la-taille-text:hover {
+    background-color: #555555;
+    transform: scale(1.1);
+}
+
+
+#augmente-la-taille-text:active,
+#reduire-la-taille-text:active {
+    transform: scale(1.05);
+    background-color: #333333;
+}
+
+/********************** CSS FOOTER ********************************/
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: #e4e4e4;
+    color: #000000;
+    padding: 20px;
+    /*text-align: center;*/
+}
+
+footer a {
+    color: #000000;
+    text-decoration: none;
+    font-family: Arial;
+    margin: 0 14px;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+
+/********************************************* RESPONSIVE DESIGN FOOTER PETIT ECRAN INTERMEDIAIRE ********************************/
+@media screen and (max-width:784px) {
+    footer {
+        flex-direction: column;
+    }
+}
+
+/******************************************* CSS MODE SOMBRE **********************************************************/
+
+/* Bouton de mode sombre */
+#toggle-dark-mode {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1000;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+body.dark-mode #toggle-dark-mode {
+    background-color: #f72664;
+}
+
+body.dark-mode{
+    background-color: #444444;
+}
+
+body.dark-mode h1{
+    color: white;
+}
+
+body.dark-mode .onglets{
+    background-color: #444444;
+}
+
+body.dark-mode #buttons {
+    background: #252525;
+}
+
+body.dark-mode p{
+    color: white;
+}
+
+body.dark-mode .verbes{
+    background: #252525;
+}
+
+body.dark-mode .liens{
+    background: #252525;
+}
+
+body.dark-mode .conteneur .bloc:nth-of-type(2){
+    background:#d3d3d3;
+}
+
+body.dark-mode .liens button{
+    background-color: black;
+    color: white;
+}
+
+body.dark-mode .liens button:hover{
+    background-color: #353535;
+}
+
+body.dark-mode footer {
+    background-color: #444444;
+
+}
+
+body.dark-mode footer a{
+    color: white;
+}

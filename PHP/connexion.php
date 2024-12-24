@@ -20,9 +20,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $_SESSION['user_id'] = $user['id'];
                 $_SESSION['user_nom'] = $user['nom'];
                 $_SESSION['user_prenom'] = $user['prenom'];
+                $_SESSION['admin'] = $user['administrateur'];
                 echo "Connexion réussie. Bienvenue, " . htmlspecialchars($user['prenom']) . " " . htmlspecialchars($user['nom']) . "!";
-                //if(!$_SESSION['admin'])
-                header('Location: ../html/sondage.html');
+                if($_SESSION['admin'])
+                    header('Location: ../html/espace_admin.html');
+                else
+                    header('Location: ../html/espace_adherent.html');
 
             } else {
                 echo "Mot de passe incorrect.";
