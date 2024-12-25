@@ -64,6 +64,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $stmt->execute();
         echo "Les données ont été enregistrées avec succès !";
+        if($_SESSION['admin'])
+            header('Location: ../html/espace_admin.php');
+        else
+            header('Location: ../html/espace_adherent.php');
 
     } catch (PDOException $e) {
         die("Erreur : " . $e->getMessage());

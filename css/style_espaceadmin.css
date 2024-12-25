@@ -106,6 +106,7 @@ h1{
 
 .button{
     color: black;
+    border-style: none;
     font-size: 20px;
     font-family: Arial;
     text-decoration: none;

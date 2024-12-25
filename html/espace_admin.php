@@ -1,5 +1,25 @@
+<?php
+session_start(); // Démarrer la session pour accéder aux données
+try{
+    $hasParticipated = false;
+    $db = new PDO('sqlite:../data/data.sqlite');
+    //verifier si l'utilisateur a déjà répondu au sondage
+    $stmt = $db->prepare("SELECT COUNT(*) FROM sondage WHERE idPersonne = :userId");
+    $stmt->bindParam(':userId', $_SESSION['user_id']);
+    $stmt->execute();
+    $count = $stmt->fetchColumn();
+} catch (PDOException $e) {
+        die("Erreur : " . $e->getMessage());
+    }
+
+if ($count > 0) {
+    $hasParticipated = true;
+}
+$_SESSION['hasParticipated'] = $hasParticipated;
+$hasParticipated = isset($_SESSION['hasParticipated']) ? $_SESSION['hasParticipated'] : false;
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Association Française du Syndrome de Fatigue Chronique</title>
@@ -42,12 +62,15 @@
         <p>Répondez à un sondage concernant votre situation (Age, Lieu de vie, Activité scolaire ou professionnelle, Qualité de vie, Besoin de soutien). Ces informations sont collectées dans le but de réaliser des indicateurs. L’objectif de cette enquête est de mieux comprendre les
             besoins et problèmes de nos adhérents. (Attention, vous ne pouvez répondre au questionnaire qu'une seule fois)
         </p>
-        <a class="button" href="./sondage.html"><div>Accéder au sondage</div></a>
+        <button class="button"
+                onclick="window.location.href='./sondage.html';" <?php echo $hasParticipated ? 'disabled' : '';?>>
+        Accéder au sondage
+        </button>
     </div>
     <div class="indicateurs">
         <h2>Indicateurs</h2>
         <p>Accéder aux indicateurs obtenus grâce au sondage. </p>
-        <a class="button" href=""><div>Accéder aux indicateurs</div></a>
+        <a href=""><button class="button" >Accéder aux indicateurs</button></a>
     </div>
 </div>
 <footer>    <a href="#">Liens utiles</a>
