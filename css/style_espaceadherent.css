@@ -118,6 +118,11 @@ h1{
     transition-duration: 0.2s;
 }
 
+.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
 /*************** BOUTONS AUGMENTER/REDUIRE TAILLE POLICE ****************************/
 
 #augmente-la-taille-text,

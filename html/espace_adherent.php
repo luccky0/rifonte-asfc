@@ -62,8 +62,8 @@ $hasParticipated = isset($_SESSION['hasParticipated']) ? $_SESSION['hasParticipa
       <p>Répondez à un sondage concernant votre situation (Age, Lieu de vie, Activité scolaire ou professionnelle, Qualité de vie, Besoin de soutien). Ces informations sont collectées dans le but de réaliser des indicateurs. L’objectif de cette enquête est de mieux comprendre les
         besoins et problèmes de nos adhérents. (Attention, vous ne pouvez répondre au questionnaire qu'une seule fois)
       </p>
-        <button class="button" title="Free Web tutorials"
-                onclick="window.location.href='./sondage.html';" <?php echo $hasParticipated ? 'disabled' : '';?>>
+        <button class="button <?php echo $hasParticipated ? 'disabled' : ''; ?>"
+                onclick="window.location.href='./sondage.html';">
             Accéder au sondage
         </button>
     </div>
