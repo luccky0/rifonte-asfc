@@ -22,9 +22,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $_SESSION['admin'] = $user['administrateur'];
                 echo "Connexion réussie. Bienvenue, " . htmlspecialchars($user['prenom']) . " " . htmlspecialchars($user['nom']) . "!";
                 if($_SESSION['admin'])
-                    header('Location: ../html/espace_admin.php');
+                    header('Location: ./espace_admin.php');
                 else
-                    header('Location: ../html/espace_adherent.php');
+                    header('Location: ./espace_adherent.php');
 
             } else {
                 echo "Mot de passe incorrect.";
