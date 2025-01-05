@@ -30,6 +30,7 @@
             $stmt->execute();
 
             echo "Inscription réussie !";
+            header('Location: ../html/authentification.html');
         } catch (PDOException $e) {
             if ($e->getCode() == 23000) {
                 echo "Erreur : Cet email est déjà enregistré.";
