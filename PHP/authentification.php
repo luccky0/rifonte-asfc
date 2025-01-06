@@ -24,7 +24,7 @@ messageFlash();
 <body>
 <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="./accueil.html">
+        <a class="navbar-brand" href="../html/accueil.html">
             <img src="../image/logo_asfc2.png">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,7 +33,7 @@ messageFlash();
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="./accueil.html">Accueil</a>
+                    <a class="nav-link active" aria-current="page" href="../html/accueil.html">Accueil</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" href="https://www.asso-sfc.org/asfc-adhesion.php">Adhésion & Contact</a>
@@ -43,7 +43,7 @@ messageFlash();
                 </li>
             </ul>
             <div class="header-buttons">
-                <a href="faireundon.html" class="don-btn">Comment faire un don ?</a>
+                <a href="../html/faireundon.html" class="don-btn">Comment faire un don ?</a>
                 <a href= "authentification.php" class="adh-btn">Espace adhérents</a>
             </div>
         </div>
