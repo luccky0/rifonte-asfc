@@ -1,12 +1,12 @@
 <?php
 session_start();
+require_once './flash.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
     try {
-
         $db = new PDO('sqlite:../data/data.sqlite');
 
         $stmt = $db->prepare("SELECT * FROM adherent WHERE email = :email");
@@ -20,24 +20,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $_SESSION['user_nom'] = $user['nom'];
                 $_SESSION['user_prenom'] = $user['prenom'];
                 $_SESSION['admin'] = $user['administrateur'];
-                echo "Connexion réussie. Bienvenue, " . htmlspecialchars($user['prenom']) . " " . htmlspecialchars($user['nom']) . "!";
-                if($_SESSION['admin'])
-                    header('Location: ./espace_admin.php');
-                else
-                    header('Location: ./espace_adherent.php');
 
+                if ($_SESSION['admin']) {
+                    header('Location: ./espace_admin.php');
+                } else {
+                    header('Location: ./espace_adherent.php');
+                }
+                exit;
             } else {
-                echo "Mot de passe incorrect.";
+                setFlashMessage(" mot de passe incorrect.", "danger");
+                header('Location: ./authentification.php');
+                exit;
             }
         } else {
-            echo "Aucun utilisateur trouvé avec cet email.";
+            setFlashMessage("Identifiant incorrect ", "danger");
+            header('Location: ./authentification.php');
+            exit;
         }
     } catch (PDOException $e) {
-        echo "Erreur : " . $e->getMessage();
+        setFlashMessage("Erreur interne, veuillez réessayer plus tard.", "danger");
+        header('Location: ./authentification.php');
+        exit;
     }
 } else {
+    http_response_code(405);
     echo "Méthode non autorisée.";
 }
-
-
-

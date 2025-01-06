@@ -1,3 +1,10 @@
+<?php
+if (!session_id()) session_start();
+require_once './flash.php';
+
+messageFlash();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,7 +44,7 @@
             </ul>
             <div class="header-buttons">
                 <a href="faireundon.html" class="don-btn">Comment faire un don ?</a>
-                <a href= "authentification.html" class="adh-btn">Espace adhérents</a>
+                <a href= "authentification.php" class="adh-btn">Espace adhérents</a>
             </div>
         </div>
     </div>

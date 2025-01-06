@@ -50,7 +50,7 @@ $hasParticipated = isset($_SESSION['hasParticipated']) ? $_SESSION['hasParticipa
             </ul>
             <div class="header-buttons">
                 <a href="../html/faireundon.html" class="don-btn">Comment faire un don ?</a>
-                <a href="../html/authentification.html" class="adh-btn">Espace adhérents</a>
+                <a href="../PHP/authentification.php" class="adh-btn">Espace adhérents</a>
             </div>
         </div>
     </div>

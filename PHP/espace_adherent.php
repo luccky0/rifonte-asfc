@@ -1,9 +1,8 @@
 <?php
-session_start(); // Démarrer la session pour accéder aux données
+session_start();
 try{
     $hasParticipated = false;
     $db = new PDO('sqlite:../data/data.sqlite');
-    //verifier si l'utilisateur a déjà répondu au sondage
     $stmt = $db->prepare("SELECT COUNT(*) FROM sondage WHERE idPersonne = :userId");
     $stmt->bindParam(':userId', $_SESSION['user_id']);
     $stmt->execute();
@@ -50,7 +49,7 @@ $hasParticipated = isset($_SESSION['hasParticipated']) ? $_SESSION['hasParticipa
         </ul>
         <div class="header-buttons">
           <a href="../html/faireundon.html" class="don-btn">Comment faire un don ?</a>
-          <a href="../html/authentification.html" class="adh-btn">Espace adhérents</a>
+          <a href="../PHP/authentification.php" class="adh-btn">Espace adhérents</a>
         </div>
       </div>
     </div>
