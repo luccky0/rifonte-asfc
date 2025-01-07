@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,7 +15,7 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="./accueil.html">
+            <a class="navbar-brand" href="accueil.php">
                 <img src="../image/logo_asfc2.png">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,7 +24,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="./accueil.html">Accueil</a>
+                        <a class="nav-link active" aria-current="page" href="accueil.php">Accueil</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="https://www.asso-sfc.org/asfc-adhesion.php">Adhésion & Contact</a>
@@ -31,8 +34,8 @@
                     </li>
                 </ul>
                 <div class="header-buttons">
-                    <a href="faireundon.html" class="don-btn">Comment faire un don ?</a>
-                    <a href="../PHP/authentification.php" class="adh-btn">Espace adhérents</a>
+                    <a href="faireundon.php" class="don-btn">Comment faire un don ?</a>
+                    <a href="<?php echo !session_id() ? "../PHP/authentification.php" : ($_SESSION['admin'] == true ? "../PHP/espace_admin.php" : "../PHP/espace_adherent.php"); ?>" class="adh-btn">Espace adhérents</a>
                 </div>
             </div>
         </div>
@@ -40,7 +43,7 @@
 
     <h1><span class="bold">Association Française du Syndrôme de Fatigue Chronique</span></h1>
     <div class="onglets">
-        <a class="QuiSommesNous" href="../html/Qui-sommes-nous.html"><div class="title" >Qui Sommes nous ?</div></a> 
+        <a class="QuiSommesNous" href="Qui-sommes-nous.php"><div class="title" >Qui Sommes nous ?</div></a>
         <a class="SFC" href="https://www.asso-sfc.org/syndrome-fatigue-chronique.php"><div class="title">Le SFC, la maladie</div></a>
         <a class="DouleurChronique" href="https://www.asso-sfc.org/fibromyalgie-douleur-chronique.php"><div class="title" >La douleur chronique</div></a>
     </div>

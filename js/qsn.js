@@ -1,4 +1,4 @@
-const links = [{title:"Les objectifs", link: "../html/Qui-sommes-nous.html"},
+const links = [{title:"Les objectifs", link: "../pages/Qui-sommes-nous.php"},
     {title:"Agrément du ministère de la santé", link:"https://www.asso-sfc.org/asfc-agrement-ministeriel.php"},
     {title:"Déclaration en préfecture", link:"https://www.asso-sfc.org/asfc-declaration-prefecture.php"},
     {title:"Les statuts", link:"https://www.asso-sfc.org/asfc-statuts.php"},

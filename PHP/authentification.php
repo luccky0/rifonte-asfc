@@ -24,7 +24,7 @@ messageFlash();
 <body>
 <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="../html/accueil.html">
+        <a class="navbar-brand" href="../pages/accueil.php">
             <img src="../image/logo_asfc2.png">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,7 +33,7 @@ messageFlash();
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="../html/accueil.html">Accueil</a>
+                    <a class="nav-link active" aria-current="page" href="../pages/accueil.php">Accueil</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" href="https://www.asso-sfc.org/asfc-adhesion.php">Adhésion & Contact</a>
@@ -43,7 +43,7 @@ messageFlash();
                 </li>
             </ul>
             <div class="header-buttons">
-                <a href="../html/faireundon.html" class="don-btn">Comment faire un don ?</a>
+                <a href="../pages/faireundon.php" class="don-btn">Comment faire un don ?</a>
                 <a href= "authentification.php" class="adh-btn">Espace adhérents</a>
             </div>
         </div>
@@ -68,7 +68,7 @@ messageFlash();
             <!-- Contenu de l'onglet "Connexion" -->
             <div class="tab-pane fade show active" id="signin" role="tabpanel" aria-labelledby="signin-tab">
                 <h3>Connexion</h3>
-                <form method="post" action="../PHP/connexion.php">
+                <form method="post" action="connexion.php">
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Email</label>
                         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" required>
@@ -99,7 +99,7 @@ messageFlash();
             <!-- Contenu de l'onglet "Inscription" -->
             <div class="tab-pane fade" id="signup" role="tabpanel" aria-labelledby="signup-tab">
                 <h3>Inscription</h3>
-                <form class="row g-3 needs-validation" action="../PHP/inscription.php" method="post">
+                <form class="row g-3 needs-validation" action="inscription.php" method="post">
                     <div class="row g-3">
                     </div>
                     <div class="row g-3">

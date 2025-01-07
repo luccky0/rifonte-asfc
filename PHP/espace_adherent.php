@@ -29,7 +29,7 @@ $hasParticipated = isset($_SESSION['hasParticipated']) ? $_SESSION['hasParticipa
 <body>
   <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="../html/accueil.html">
+      <a class="navbar-brand" href="../pages/accueil.php">
         <img src="../image/logo_asfc2.png">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,7 +38,7 @@ $hasParticipated = isset($_SESSION['hasParticipated']) ? $_SESSION['hasParticipa
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="../html/accueil.html">Accueil</a>
+            <a class="nav-link active" aria-current="page" href="../pages/accueil.php">Accueil</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" href="https://www.asso-sfc.org/asfc-adhesion.php">Adhésion & Contact</a>
@@ -48,8 +48,8 @@ $hasParticipated = isset($_SESSION['hasParticipated']) ? $_SESSION['hasParticipa
           </li>
         </ul>
         <div class="header-buttons">
-          <a href="../html/faireundon.html" class="don-btn">Comment faire un don ?</a>
-          <a href="../PHP/authentification.php" class="adh-btn">Espace adhérents</a>
+          <a href="../pages/faireundon.php" class="don-btn">Comment faire un don ?</a>
+          <a href="<?php echo !session_id() ? "../PHP/authentification.php" : ($_SESSION['admin'] == true ? "../PHP/espace_admin.php" : "../PHP/espace_adherent.php"); ?>" class="adh-btn">Espace adhérents</a>
         </div>
       </div>
     </div>
@@ -62,7 +62,7 @@ $hasParticipated = isset($_SESSION['hasParticipated']) ? $_SESSION['hasParticipa
         besoins et problèmes de nos adhérents. (Attention, vous ne pouvez répondre au questionnaire qu'une seule fois)
       </p>
         <button class="button <?php echo $hasParticipated ? 'disabled' : ''; ?>"
-                onclick="window.location.href='../html/sondage.html';">
+                onclick="window.location.href='../pages/page_sondage.php';">
             Accéder au sondage
         </button>
     </div>
