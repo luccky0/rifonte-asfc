@@ -49,7 +49,7 @@ $hasParticipated = isset($_SESSION['hasParticipated']) ? $_SESSION['hasParticipa
         </ul>
         <div class="header-buttons">
           <a href="../pages/faireundon.php" class="don-btn">Comment faire un don ?</a>
-          <a href="<?php echo !session_id() ? "../PHP/authentification.php" : ($_SESSION['admin'] == true ? "../PHP/espace_admin.php" : "../PHP/espace_adherent.php"); ?>" class="adh-btn">Espace adhérents</a>
+          <a href="<?php echo !isset($_SESSION['user_id']) ? "../PHP/authentification.php" : ($_SESSION['admin'] == true ? "../PHP/espace_admin.php" : "../PHP/espace_adherent.php"); ?> " class="adh-btn">Espace adhérents</a>
         </div>
       </div>
     </div>
@@ -66,6 +66,12 @@ $hasParticipated = isset($_SESSION['hasParticipated']) ? $_SESSION['hasParticipa
             Accéder au sondage
         </button>
     </div>
+      <div class="deconextion">
+          <button class="button"
+                  onclick="<?php $_SESSION = []; session_destroy()?>  window.location.href='./authentification.php'; ">
+              déconnexion
+          </button>
+      </div>
   </div>
   <footer>    <a href="#">Liens utiles</a>
     <a href="#">Documentation</a>

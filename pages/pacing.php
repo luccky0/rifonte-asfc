@@ -35,7 +35,7 @@ session_start();
                 </ul>
                 <div class="header-buttons">
                     <a href="faireundon.php" class="don-btn">Comment faire un don ?</a>
-                    <a href="<?php echo !session_id() ? "../PHP/authentification.php" : ($_SESSION['admin'] == true ? "../PHP/espace_admin.php" : "../PHP/espace_adherent.php"); ?>" class="adh-btn">Espace adhérents</a>
+                    <a href="<?php echo !isset($_SESSION['user_id']) ? "../PHP/authentification.php" : ($_SESSION['admin'] == true ? "../PHP/espace_admin.php" : "../PHP/espace_adherent.php"); ?> " class="adh-btn">Espace adhérents</a>
                 </div>
             </div>
         </div>

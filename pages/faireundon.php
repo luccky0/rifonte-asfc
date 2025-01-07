@@ -34,7 +34,7 @@ session_start();
                     </li>
                 </ul>
                 <div class="header-buttons">
-                    <a href="<?php echo !session_id() ? "../PHP/authentification.php" : ($_SESSION['admin'] == true ? "../PHP/espace_admin.php" : "../PHP/espace_adherent.php"); ?>" class="adh-btn">Espace adhérents</a>
+                    <a href="<?php echo !isset($_SESSION['user_id']) ? "../PHP/authentification.php" : ($_SESSION['admin'] == true ? "../PHP/espace_admin.php" : "../PHP/espace_adherent.php"); ?> " class="adh-btn">Espace adhérents</a>
                 </div>
             </div>
         </div>
