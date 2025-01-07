@@ -68,7 +68,7 @@ session_start();
             </p><h2>ASFC</h2><p> <br> Association Française du Syndrome de Fatigue Chronique <br> Maison des Associations, 19 rue wicardenne - 62200 BOULOGNE S/MER
                 
                 </p>
-                <a class="donbutton" style="text-decoration:none"><div >TÉLÉCHARGER LE FORMULAIRE DE DON</div></a>
+                <a class="donbutton" href="../documents/60-Formulaire-de-don.pdf" style="text-decoration:none"><div >TÉLÉCHARGER LE FORMULAIRE DE DON</div></a>
 
         </div>
     </div>
