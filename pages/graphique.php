@@ -78,7 +78,7 @@ session_start();
     <tbody id="ageMoyenActivite"></tbody>
 
 </table>
-
+    <h1>Pourcentage d'adhérents ayant besoin de soutien</h1>
 <div id="chart"></div>
 <table id ="autonomieTable">
     <thead>
@@ -88,7 +88,7 @@ session_start();
     </thead>
     <tbody id="autonomie"></tbody>
 </table>
-<h1>Nom d'adhérents par types de qualité de vie </h1>
+<h1>Nombre d'adhérents par types de qualité de vie </h1>
     <div id="qualiterdevie"></div>
 </body>
 </html>
