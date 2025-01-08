@@ -69,15 +69,19 @@ session_start();
     <tbody id="ageMoyenActivite"></tbody>
 
 </table>
+
 <div id="chart"></div>
 <table id ="autonomieTable">
     <thead>
     <tr>
-        <th>Nom</th>
+        <th>Besoin de soutien</th>
         <th>Pourcentage</th>
 
     </tr>
     </thead>
     <tbody id="autonomie"></tbody>
+
+    <div id="qualiterdevie"></div>
+
 </body>
 </html>
