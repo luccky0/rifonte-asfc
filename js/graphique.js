@@ -5,7 +5,7 @@ async function fetchRepartition() {
     const totalCell = document.getElementById('totalLieuDeVie');
     const tableBody = document.getElementById('lieuDevieTable');
 
-// Remplir le tableau avec les données
+
     let compteur =0;
         data.forEach(d => {compteur+=d.nombrePresent;});
     data.forEach(d => {
@@ -33,7 +33,7 @@ async function fetchAgeMoyen() {
         const tableBody = document.getElementById('ageMoyenActivite');
 
 
-// Remplir le tableau avec les données
+
         data.forEach(d => {
             const row = tableBody.insertRow(); // Insérer une nouvelle ligne
             const cell1 = row.insertCell(0);  // Insérer la première cellule
@@ -55,20 +55,19 @@ async function diagrammeCirculaire() {
     // Vérifiez que le fichier est bien chargé
     console.log("Le fichier script.js est chargé");
 
-    // 1. Préparer les données
+
     try {
         const reponse = await fetch('../php/autonomieAdherent.php');
         const data = await reponse.json();
         console.log(data);
         const tableBody = document.getElementById('autonomie');
 
-        // Effacer les anciennes données du tableau
+
         tableBody.innerHTML = '';
 
         // Effacer les anciens éléments SVG
         d3.select("#chart").select("svg").remove();
 
-        // 2. Dimensions
         let tab = [];
         let compteur = 0;
         data.forEach(d => { compteur += d.nombrePresent; });
@@ -80,12 +79,10 @@ async function diagrammeCirculaire() {
         const height = 500;
         const radius = Math.min(width, height) / 2;
 
-        // 3. Couleurs
         const color = d3.scaleOrdinal()
             .domain(data.map(d => d.category))
             .range(d3.schemeCategory10);
 
-        // 4. Canevas SVG
         const svg = d3.select("#chart")
             .append("svg")
             .attr("width", width)
@@ -93,7 +90,6 @@ async function diagrammeCirculaire() {
             .append("g")
             .attr("transform", `translate(${(width / 2)}, ${(height / 2)})`);
 
-        // 5. Générer les arcs
         const pi = d3.pie().value(d => d.nombrePresent);
 
         const arc = d3.arc()
@@ -108,17 +104,15 @@ async function diagrammeCirculaire() {
         });
         const dataTab = d3.pie()(values);
 
-        // 6. Ajouter les segments
         svg.selectAll("path")
             .data(pi(data))
             .enter()
             .append("path")
             .attr("d", arc)
-            .attr("stroke", "#fff") // Couleur de la bordure (blanche ici)
-            .attr("stroke-width", 2) // Épaisseur de la bordure
+            .attr("stroke", "#fff")
+            .attr("stroke-width", 2)
             .attr("fill", d => color(d.data.id));
 
-        // 7. Ajouter les labels
         svg.selectAll("text")
             .data(dataTab)
             .enter()
@@ -131,10 +125,9 @@ async function diagrammeCirculaire() {
 
         console.log(pi(data));
 
-        // Remplir le tableau avec les données
         data.forEach(d => {
-            const row = tableBody.insertRow(); // Insérer une nouvelle ligne
-            const cell1 = row.insertCell(0);  // Insérer la première cellule
+            const row = tableBody.insertRow();
+            const cell1 = row.insertCell(0);
 
             cell1.textContent = d.nom;
             cell1.style.backgroundColor = color(d.id);
@@ -150,19 +143,16 @@ async function qualiterDeVie() {
         const reponse = await fetch('../php/qualiterdevie_adherent.php');
         const data = await reponse.json();
 
-        console.log("Données récupérées:", data); // Ajoutez cette ligne pour vérifier les données
+        console.log("Données récupérées:", data);
 
         if (!data || data.error) {
             console.error("Erreur lors de la récupération des données:", data.error || "Aucune donnée disponible");
-            return; // Si aucune donnée n'est reçue ou une erreur survient
+            return;
         }
 
-        // Calcul du total des adhérents pour la répartition
         const totalAdherents = data.reduce((sum, d) => sum + d.nombrePresent, 0);
         console.log("Total des adhérents:", totalAdherents);
 
-
-        // Création du graphique
         const chartDiv = document.getElementById('qualiterdevie');
         chartDiv.innerHTML = "";  // Clear previous chart if any
 
@@ -173,35 +163,31 @@ async function qualiterDeVie() {
         const marginBottom = 30;
         const marginLeft = 40;
 
-        // Déclarez l'échelle x (position horizontale)
         const x = d3.scaleBand()
-            .domain(data.map(d => d.nom))  // Utilisez "nom" comme domaine (nom de la qualité de vie)
+            .domain(data.map(d => d.nom))
             .range([marginLeft, width - marginRight - 120])
             .padding(0.1);
 
-        // Déclarez l'échelle y (position verticale)
         const y = d3.scaleLinear()
-            .domain([0, d3.max(data, d => d.nombrePresent)])  // Utilisez "nombrePresent" pour l'axe Y
+            .domain([0, d3.max(data, d => d.nombrePresent)])
             .range([height - marginBottom, marginTop]);
 
-        // Créez le conteneur SVG
         const svg = d3.create("svg")
             .attr("width", width)
             .attr("height", height+300)
             .attr("viewBox", [0, 0, width, height])
             .attr("style", "max-width: 100%; height: auto;");
 
-        // Ajoutez un rectangle pour chaque barre
         svg.append("g")
             .attr("fill", "steelblue")
             .attr("transform", `translate(120,0)`)
             .selectAll()
             .data(data)
             .join("rect")
-            .attr("x", d => x(d.nom))  // Position horizontale basée sur le nom
-            .attr("y", d => y(d.nombrePresent))  // Position verticale basée sur nombrePresent
+            .attr("x", d => x(d.nom))
+            .attr("y", d => y(d.nombrePresent))
             .attr("height", d => y(0) - y(d.nombrePresent))
-            .attr("width", x.bandwidth());  // Largeur des barres
+            .attr("width", x.bandwidth());
 
         svg.selectAll("text")
             .data(data)
@@ -217,10 +203,9 @@ async function qualiterDeVie() {
             .attr("transform", `translate(120,${height - marginBottom})`)
             .call(d3.axisBottom(x).tickSizeOuter(0))
             .selectAll("text")
-            .attr("transform", "rotate(-10)")  // Inclinaison des labels
-            .attr("text-anchor", "end");      // Alignement correct du texte
+            .attr("transform", "rotate(-10)")
+            .attr("text-anchor", "end");
 
-        // Ajoutez l'axe Y et le libellé
         svg.append("g")
             .attr("transform", `translate(${marginLeft + 120} ,0)`)
             .call(d3.axisLeft(y))
@@ -245,11 +230,10 @@ async function qualiterDeVie() {
 async function main(){
     console.log("Début du programme");
 
-    // Appeler d'autres fonctions asynchrones si nécessaire
     await fetchRepartition();
+
     await fetchAgeMoyen();
 
-    // Créer le camembert après récupération des données
     await diagrammeCirculaire();
 
     await qualiterDeVie();

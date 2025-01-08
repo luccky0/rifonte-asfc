@@ -44,7 +44,13 @@ messageFlash();
             </ul>
             <div class="header-buttons">
                 <a href="../pages/faireundon.php" class="don-btn">Comment faire un don ?</a>
-                <a href= "<?php echo isset($_SERVER['HTTP_REFERER']) ? htmlspecialchars($_SERVER['HTTP_REFERER']) : 'authentification.php'; ?>" class="adh-btn">Retour</a>
+                <a href="<?php echo isset($_SERVER['HTTP_REFERER']) && (strpos($_SERVER['HTTP_REFERER'], 'espace_adherent.php') !== false || strpos($_SERVER['HTTP_REFERER'], 'espace_admin.php') !== false) ? 'authentification.php': htmlspecialchars($_SERVER['HTTP_REFERER']); ?>" class="adh-btn">
+                    <?php
+                    echo isset($_SERVER['HTTP_REFERER']) && (strpos($_SERVER['HTTP_REFERER'], 'espace_adherent.php') !== false || strpos($_SERVER['HTTP_REFERER'], 'espace_admin.php') !== false || strpos($_SERVER['HTTP_REFERER'], 'authentification.php') !== false)
+                        ? "Espace adhérent"
+                        : "Retour";
+                    ?>
+                </a>
             </div>
         </div>
     </div>
