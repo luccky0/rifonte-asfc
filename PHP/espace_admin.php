@@ -69,7 +69,7 @@ $hasParticipated = isset($_SESSION['hasParticipated']) ? $_SESSION['hasParticipa
     <div class="indicateurs">
         <h2>Indicateurs</h2>
         <p>Accéder aux indicateurs obtenus grâce au sondage. </p>
-        <a href=""><button class="button" >Accéder aux indicateurs</button></a>
+        <a href="../pages/graphique.php"><button class="button" >Accéder aux indicateurs</button></a>
     </div>
     <div class="deconextion">
         <button class="button" onclick="window.location.href='./deconnexion.php';">
