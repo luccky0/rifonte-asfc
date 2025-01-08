@@ -1,3 +1,74 @@
+/******************************* CSS NAVBAR *************************************************/
+
+.navbar {
+    position: relative;
+    background: linear-gradient(to right, #022d5d, #011E0B);
+    margin-bottom: 20px;
+}
+
+.navbar img {
+    height: 40px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.header-buttons {
+    position: absolute;
+    display: flex;
+    right: 5px;
+    top: 13px;
+}
+
+.header-buttons a:hover {
+    transform: scale(1.05);
+    text-decoration: none;
+}
+
+/* Responsive for small screens */
+@media (max-width: 991px) {
+    .header-buttons {
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom:10px;
+    }
+    .header-buttons a:hover {
+        transform: scale(1.02);
+    }
+
+    .don-btn,
+    .adh-btn {
+        width: 100%;
+        padding: 5px 10px;
+        font-size: 14px;
+
+    }
+}
+
+/******************************* BUTTON STYLES ***********************************************/
+.don-btn {
+    background-color: #f72664;
+    color: white;
+    padding: 10px 20px;
+    margin: auto 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.adh-btn {
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+
+
+
 table {
     width: 50%;
     border-collapse: collapse;
@@ -28,4 +99,32 @@ table{
 
 h1{
     text-align: center;
+}
+
+/********************** CSS FOOTER ********************************/
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: #e4e4e4;
+    color: #000000;
+    padding: 20px;
+    /*text-align: center;*/
+}
+
+footer a {
+    color: #000000;
+    text-decoration: none;
+    font-family: Arial;
+    margin: 0 14px;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+
+/********************************************* RESPONSIVE DESIGN FOOTER PETIT ECRAN INTERMEDIAIRE ********************************/
+@media screen and (max-width:784px) {
+    footer {
+        flex-direction: column;
+    }
 }

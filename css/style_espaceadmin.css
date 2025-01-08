@@ -81,8 +81,9 @@ h1{
 #buttons{
     display: flex;
     justify-content: space-around;
-    padding: 20px;
+    padding: 30px;
     background: linear-gradient( rgb(35, 78, 170) 0%, rgba(48, 131, 151, 0.628) 100%);
+
 }
 
 #buttons h2{
