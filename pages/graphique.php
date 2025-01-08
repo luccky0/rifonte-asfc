@@ -23,6 +23,18 @@ session_start();
     th, td {
         text-align: center;
         padding: 8px;
+
+    }
+    table{
+        margin-left: 25%;
+    }
+    #chart{
+        margin-left: 40%;
+        margin-top: 3%;
+
+    }
+    h1{
+        text-align: center;
     }
 </style>
 </head>
@@ -57,5 +69,15 @@ session_start();
     <tbody id="ageMoyenActivite"></tbody>
 
 </table>
+<div id="chart"></div>
+<table id ="autonomieTable">
+    <thead>
+    <tr>
+        <th>Nom</th>
+        <th>Pourcentage</th>
+
+    </tr>
+    </thead>
+    <tbody id="autonomie"></tbody>
 </body>
 </html>
