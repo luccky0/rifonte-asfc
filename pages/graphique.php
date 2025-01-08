@@ -66,7 +66,7 @@ session_start();
     </tr>
     </tfoot>
 </table>
-<h1>Moyenne des adhérents par activité scolaire ou professionnelle</h1>
+<h1>Age moyen des adhérents par activité scolaire ou professionnelle</h1>
 <table>
     <thead>
     <tr>
