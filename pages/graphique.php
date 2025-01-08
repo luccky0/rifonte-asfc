@@ -88,7 +88,7 @@ session_start();
     </thead>
     <tbody id="autonomie"></tbody>
 </table>
-<h1>Nom d'adhérents par types de qualiter de vie </h1>
+<h1>Nom d'adhérents par types de qualité de vie </h1>
     <div id="qualiterdevie"></div>
 </body>
 </html>
