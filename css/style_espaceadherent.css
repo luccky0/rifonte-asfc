@@ -79,6 +79,7 @@ h1{
 /*************** BOUTONS SONDAGE ET INDICATEURS ************************************/
 
 #buttons{
+    display: flex;
     padding: 20px;
     background: linear-gradient( rgb(35, 78, 170) 0%, rgba(48, 131, 151, 0.628) 100%);
 }

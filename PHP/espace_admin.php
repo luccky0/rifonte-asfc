@@ -1,9 +1,8 @@
 <?php
-session_start(); // Démarrer la session pour accéder aux données
+session_start();
 try{
     $hasParticipated = false;
     $db = new PDO('sqlite:../data/data.sqlite');
-    //verifier si l'utilisateur a déjà répondu au sondage
     $stmt = $db->prepare("SELECT COUNT(*) FROM sondage WHERE idPersonne = :userId");
     $stmt->bindParam(':userId', $_SESSION['user_id']);
     $stmt->execute();
@@ -73,9 +72,8 @@ $hasParticipated = isset($_SESSION['hasParticipated']) ? $_SESSION['hasParticipa
         <a href=""><button class="button" >Accéder aux indicateurs</button></a>
     </div>
     <div class="deconextion">
-        <button class="button"
-                onclick="<?php $_SESSION = []; session_destroy()?>  window.location.href='./authentification.php'; ">
-            déconnexion
+        <button class="button" onclick="window.location.href='./deconnexion.php';">
+            Déconnexion
         </button>
     </div>
 </div>
