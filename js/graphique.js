@@ -185,13 +185,12 @@ async function qualiterDeVie() {
             .attr("width", width)
             .attr("height", height+300)
             .attr("viewBox", [0, 0, width, height])
-    .attr("style", "max-width: 100%; height: auto;")
+            .attr("style", "max-width: 100%; height: auto;");
 
         // Ajoutez un rectangle pour chaque barre
         svg.append("g")
             .attr("fill", "steelblue")
             .attr("transform", `translate(120,0)`)
-
             .selectAll()
             .data(data)
             .join("rect")
@@ -200,7 +199,14 @@ async function qualiterDeVie() {
             .attr("height", d => y(0) - y(d.nombrePresent))
             .attr("width", x.bandwidth());  // Largeur des barres
 
-
+        svg.selectAll("text")
+            .data(data)
+            .join("text")
+            .attr("x", d => x(d.nom) + x.bandwidth() / 2 + 115)
+            .attr("y", d => y(d.nombrePresent) - 5)
+            .attr("text-anchor", "middel")
+            .attr("fill", "black")
+            .text(d => d.nombrePresent);
 
         // Ajoutez l'axe X et le libellé
         svg.append("g")
@@ -213,15 +219,14 @@ async function qualiterDeVie() {
         // Ajoutez l'axe Y et le libellé
         svg.append("g")
             .attr("transform", `translate(${marginLeft + 120} ,0)`)
-
             .call(d3.axisLeft(y))
             .call(g => g.select(".domain").remove())
             .call(g => g.append("text")
-                .attr("x", -marginLeft)
+                .attr("x", marginLeft - 150)
                 .attr("y", 10)
                 .attr("fill", "currentColor")
                 .attr("text-anchor", "start")
-                .text("Nombre de presents"));
+                .text("Nombre de personnes"));
 
         chartDiv.appendChild(svg.node());
 
