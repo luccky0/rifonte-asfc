@@ -44,7 +44,7 @@ messageFlash();
             </ul>
             <div class="header-buttons">
                 <a href="../pages/faireundon.php" class="don-btn">Comment faire un don ?</a>
-                <a href= "authentification.php" class="adh-btn">Espace adhérents</a>
+                <a href= "<?php echo isset($_SERVER['HTTP_REFERER']) ? htmlspecialchars($_SERVER['HTTP_REFERER']) : 'authentification.php'; ?>" class="adh-btn">Retour</a>
             </div>
         </div>
     </div>
