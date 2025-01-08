@@ -2,7 +2,7 @@
 session_start();
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,7 @@ session_start();
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="../js/graphique.js" ></script>
 </head>
-<body>
+<br>
 <style>
     table {
         width: 50%;
@@ -88,7 +88,7 @@ session_start();
     </thead>
     <tbody id="autonomie"></tbody>
 </table>
+<h1>Nom d'adhérents par types de qualiter de vie </h1>
     <div id="qualiterdevie"></div>
-
 </body>
 </html>
