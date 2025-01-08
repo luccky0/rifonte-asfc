@@ -9,43 +9,11 @@ session_start();
     <title>Graphique D3.js</title>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="../js/graphique.js" ></script>
+    <script src="../js/graphique.js" defer></script>
+    <link rel="stylesheet" href="../css/style-graphique.css">
 </head>
 <br>
-<style>
-    table {
-        width: 50%;
-        border-collapse: collapse;
-        margin: 20px 0;
-    }
-    table, th, td {
-        border: 1px solid black;
-    }
-    th, td {
-        text-align: center;
-        padding: 8px;
 
-    }
-    table{
-        margin-left: 25%;
-    }
-
-    #qualiterdevie{
-        margin-left: 22%;
-
-    }
-
-    #chart{
-        margin-left: 40%;
-        margin-top: 3%;
-
-    }
-
-    h1{
-        text-align: center;
-    }
-</style>
-
-<a href="../PHP/espace_admin.php"><button id="buttonretour">Retour</button></a>
 
 <h1>Tableau de la répartition des adhérents dans les lieux de vie</h1>
 <table>
@@ -90,5 +58,7 @@ session_start();
 </table>
 <h1>Nombre d'adhérents par types de qualité de vie </h1>
     <div id="qualiterdevie"></div>
+
+<a href="../PHP/espace_admin.php"><button id="buttonretour">Retour</button></a>
 </body>
 </html>

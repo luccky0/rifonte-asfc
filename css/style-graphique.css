@@ -1,0 +1,31 @@
+table {
+    width: 50%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+table, th, td {
+    border: 1px solid black;
+}
+th, td {
+    text-align: center;
+    padding: 8px;
+
+}
+table{
+    margin-left: 25%;
+}
+
+#qualiterdevie{
+    margin-left: 22%;
+
+}
+
+#chart{
+    margin-left: 40%;
+    margin-top: 3%;
+
+}
+
+h1{
+    text-align: center;
+}
