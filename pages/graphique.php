@@ -28,16 +28,25 @@ session_start();
     table{
         margin-left: 25%;
     }
+
+    #qualiterdevie{
+        margin-left: 22%;
+
+    }
+
     #chart{
         margin-left: 40%;
         margin-top: 3%;
 
     }
+
     h1{
         text-align: center;
     }
 </style>
-</head>
+
+<a href="../PHP/espace_admin.php"><button id="buttonretour">Retour</button></a>
+
 <h1>Tableau de la répartition des adhérents dans les lieux de vie</h1>
 <table>
     <thead>
@@ -75,12 +84,10 @@ session_start();
     <thead>
     <tr>
         <th>Besoin de soutien</th>
-        <th>Pourcentage</th>
-
     </tr>
     </thead>
     <tbody id="autonomie"></tbody>
-
+</table>
     <div id="qualiterdevie"></div>
 
 </body>

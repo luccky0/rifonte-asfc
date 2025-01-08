@@ -61,6 +61,7 @@ async function fetchAgeMoyen() {
             const reponse = await fetch('../php/autonomieAdherent.php');
             const data = await reponse.json();
             console.log(data);
+            const tableBody = document.getElementById('autonomie');
 
     // 2. Dimensions
             let tab = [];
@@ -125,16 +126,14 @@ async function fetchAgeMoyen() {
                 .style("fill", "#fff");
             console.log(pi(data));
 
-            const tableBody = document.getElementById('autonomie');
 
     // Remplir le tableau avec les données
             data.forEach(d => {
                 const row = tableBody.insertRow(); // Insérer une nouvelle ligne
                 const cell1 = row.insertCell(0);  // Insérer la première cellule
-                const cell2 = row.insertCell(1);  // Insérer la deuxième cellule
 
                 cell1.textContent = d.nom;
-                cell2.textContent = ((d.nombrePresent*100 )/compteur).toFixed(2) + '%';
+                cell1.style.backgroundColor = color(d.id);
             });
 
         }
@@ -158,21 +157,6 @@ async function qualiterDeVie() {
         const totalAdherents = data.reduce((sum, d) => sum + d.nombrePresent, 0);
         console.log("Total des adhérents:", totalAdherents);
 
-        // Remplissage du tableau "répartition des adhérents dans les lieux de vie"
-        const tableLieuDeVie = document.getElementById("lieuDevieTable");
-        data.forEach(d => {
-            const row = tableLieuDeVie.insertRow();
-            const cell1 = row.insertCell(0);
-            const cell2 = row.insertCell(1);
-            const cell3 = row.insertCell(2);
-
-            cell1.textContent = d.nom;
-            cell2.textContent = d.nombrePresent;
-            cell3.textContent = ((d.nombrePresent / totalAdherents) * 100).toFixed(2) + "%";
-        });
-
-        // Affichage du total dans la table
-        document.getElementById("totalLieuDeVie").textContent = totalAdherents;
 
         // Création du graphique
         const chartDiv = document.getElementById('qualiterdevie');
@@ -188,7 +172,7 @@ async function qualiterDeVie() {
         // Déclarez l'échelle x (position horizontale)
         const x = d3.scaleBand()
             .domain(data.map(d => d.nom))  // Utilisez "nom" comme domaine (nom de la qualité de vie)
-            .range([marginLeft, width - marginRight])
+            .range([marginLeft, width - marginRight - 120])
             .padding(0.1);
 
         // Déclarez l'échelle y (position verticale)
@@ -199,39 +183,37 @@ async function qualiterDeVie() {
         // Créez le conteneur SVG
         const svg = d3.create("svg")
             .attr("width", width)
-            .attr("height", height)
+            .attr("height", height+300)
             .attr("viewBox", [0, 0, width, height])
-            .attr("style", "max-width: 100%; height: auto;");
+    .attr("style", "max-width: 100%; height: auto;")
 
         // Ajoutez un rectangle pour chaque barre
         svg.append("g")
             .attr("fill", "steelblue")
+            .attr("transform", `translate(120,0)`)
+
             .selectAll()
             .data(data)
             .join("rect")
             .attr("x", d => x(d.nom))  // Position horizontale basée sur le nom
             .attr("y", d => y(d.nombrePresent))  // Position verticale basée sur nombrePresent
-            .attr("height", d => y(0) - y(d.nombrePresent))  // Calcul de la hauteur de la barre
+            .attr("height", d => y(0) - y(d.nombrePresent))
             .attr("width", x.bandwidth());  // Largeur des barres
 
-        // Ajoutez des étiquettes pour chaque barre
-        svg.selectAll("text")
-            .data(data)
-            .join("text")
-            .attr("x", d => x(d.nom) + x.bandwidth() / 2)
-            .attr("y", d => y(d.nombrePresent) - 5)
-            .attr("text-anchor", "middle")
-            .attr("fill", "white")
-            .text(d => d.nombrePresent);
+
 
         // Ajoutez l'axe X et le libellé
         svg.append("g")
-            .attr("transform", `translate(0,${height - marginBottom})`)
-            .call(d3.axisBottom(x).tickSizeOuter(0));
+            .attr("transform", `translate(120,${height - marginBottom})`)
+            .call(d3.axisBottom(x).tickSizeOuter(0))
+            .selectAll("text")
+            .attr("transform", "rotate(-10)")  // Inclinaison des labels
+            .attr("text-anchor", "end");      // Alignement correct du texte
 
         // Ajoutez l'axe Y et le libellé
         svg.append("g")
-            .attr("transform", `translate(${marginLeft},0)`)
+            .attr("transform", `translate(${marginLeft + 120} ,0)`)
+
             .call(d3.axisLeft(y))
             .call(g => g.select(".domain").remove())
             .call(g => g.append("text")
@@ -239,7 +221,7 @@ async function qualiterDeVie() {
                 .attr("y", 10)
                 .attr("fill", "currentColor")
                 .attr("text-anchor", "start")
-                .text("? Nombre de présents"));
+                .text("Nombre de presents"));
 
         chartDiv.appendChild(svg.node());
 
